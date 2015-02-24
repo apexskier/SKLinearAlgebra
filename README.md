@@ -2,9 +2,14 @@
 
 Linear Algebra extensions for SceneKit
 
-This library allows common vector operations using SceneKit's native
-`SCNVector3`, `SCNVector4`, and `SCNMatrix4` types. It also provides
-useful linear algebra functions for 3D graphics.
+This library allows common vector operations using SceneKit's
+[native types](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_DataTypes/index.html#//apple_ref/c/tdef/SCNQuaternion): 
+`SCNVector3`, `SCNVector4`, and `SCNMatrix4`. It also provides useful
+linear algebra functions for 3D graphics.
+
+It has been written in the style of Swift, intending to enhance and complete 
+Scenekit's existing
+[functions](https://developer.apple.com/library/mac/documentation/SceneKit/Reference/SceneKit_Functions/).
 
 ## Implemented
 
@@ -15,7 +20,8 @@ Tests are complete for all implemented features.
 - equality (`==`)
 - inequality (`!=`)
 - equivalence (`≈`)
-  - returns true if the components of two vectos are close to equal to each other.
+  - returns true if the components of two vectos are close to equal to each 
+    other.
 - inequivalence (`!≈`)
 - vector addition (`+`)
 - vector subtraction (`-`)
