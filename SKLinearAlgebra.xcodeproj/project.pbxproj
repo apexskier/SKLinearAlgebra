@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C551E8021A9C3BE500BFDD3C /* LinAlg.h in Headers */ = {isa = PBXBuildFile; fileRef = C551E8011A9C3BE500BFDD3C /* LinAlg.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C551E8081A9C3BE500BFDD3C /* LinAlg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C551E7FC1A9C3BE500BFDD3C /* LinAlg.framework */; };
-		C551E80F1A9C3BE500BFDD3C /* LinAlgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E80E1A9C3BE500BFDD3C /* LinAlgTests.swift */; };
+		C551E8081A9C3BE500BFDD3C /* SKLinearAlgebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */; };
+		C551E80F1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */; };
+		C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */; };
+		C551E81A1A9C3C2400BFDD3C /* LinearAlgebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */; };
+		C58194631A9D029000A11626 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194621A9D029000A11626 /* Vector3.swift */; };
+		C58194651A9D040B00A11626 /* Vector4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194641A9D040B00A11626 /* Vector4.swift */; };
+		C58194661A9D070300A11626 /* Vector4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194641A9D040B00A11626 /* Vector4.swift */; };
+		C58194671A9D070300A11626 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194621A9D029000A11626 /* Vector3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -18,17 +23,19 @@
 			containerPortal = C551E7F31A9C3BE500BFDD3C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C551E7FB1A9C3BE500BFDD3C;
-			remoteInfo = LinAlg;
+			remoteInfo = SKLinearAlgebra;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C551E7FC1A9C3BE500BFDD3C /* LinAlg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LinAlg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKLinearAlgebra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C551E8001A9C3BE500BFDD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C551E8011A9C3BE500BFDD3C /* LinAlg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinAlg.h; sourceTree = "<group>"; };
-		C551E8071A9C3BE500BFDD3C /* LinAlgTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinAlgTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C551E8071A9C3BE500BFDD3C /* SKLinearAlgebraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKLinearAlgebraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C551E80D1A9C3BE500BFDD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C551E80E1A9C3BE500BFDD3C /* LinAlgTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinAlgTests.swift; sourceTree = "<group>"; };
+		C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLinearAlgebraTests.swift; sourceTree = "<group>"; };
+		C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearAlgebra.swift; sourceTree = "<group>"; };
+		C58194621A9D029000A11626 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		C58194641A9D040B00A11626 /* Vector4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C551E8081A9C3BE500BFDD3C /* LinAlg.framework in Frameworks */,
+				C551E8081A9C3BE500BFDD3C /* SKLinearAlgebra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +60,8 @@
 		C551E7F21A9C3BE500BFDD3C = {
 			isa = PBXGroup;
 			children = (
-				C551E7FE1A9C3BE500BFDD3C /* LinAlg */,
-				C551E80B1A9C3BE500BFDD3C /* LinAlgTests */,
+				C551E7FE1A9C3BE500BFDD3C /* SLLinearAlgebra */,
+				C551E80B1A9C3BE500BFDD3C /* SKLinearAlgebraTests */,
 				C551E7FD1A9C3BE500BFDD3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,19 +69,22 @@
 		C551E7FD1A9C3BE500BFDD3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C551E7FC1A9C3BE500BFDD3C /* LinAlg.framework */,
-				C551E8071A9C3BE500BFDD3C /* LinAlgTests.xctest */,
+				C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */,
+				C551E8071A9C3BE500BFDD3C /* SKLinearAlgebraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C551E7FE1A9C3BE500BFDD3C /* LinAlg */ = {
+		C551E7FE1A9C3BE500BFDD3C /* SLLinearAlgebra */ = {
 			isa = PBXGroup;
 			children = (
-				C551E8011A9C3BE500BFDD3C /* LinAlg.h */,
+				C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */,
+				C58194641A9D040B00A11626 /* Vector4.swift */,
+				C58194621A9D029000A11626 /* Vector3.swift */,
 				C551E7FF1A9C3BE500BFDD3C /* Supporting Files */,
 			);
-			path = LinAlg;
+			name = SLLinearAlgebra;
+			path = SKLinearAlgebra;
 			sourceTree = "<group>";
 		};
 		C551E7FF1A9C3BE500BFDD3C /* Supporting Files */ = {
@@ -85,13 +95,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C551E80B1A9C3BE500BFDD3C /* LinAlgTests */ = {
+		C551E80B1A9C3BE500BFDD3C /* SKLinearAlgebraTests */ = {
 			isa = PBXGroup;
 			children = (
-				C551E80E1A9C3BE500BFDD3C /* LinAlgTests.swift */,
+				C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */,
 				C551E80C1A9C3BE500BFDD3C /* Supporting Files */,
 			);
-			path = LinAlgTests;
+			path = SKLinearAlgebraTests;
 			sourceTree = "<group>";
 		};
 		C551E80C1A9C3BE500BFDD3C /* Supporting Files */ = {
@@ -109,16 +119,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C551E8021A9C3BE500BFDD3C /* LinAlg.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C551E7FB1A9C3BE500BFDD3C /* LinAlg */ = {
+		C551E7FB1A9C3BE500BFDD3C /* SKLinearAlgebra */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C551E8121A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "LinAlg" */;
+			buildConfigurationList = C551E8121A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "SKLinearAlgebra" */;
 			buildPhases = (
 				C551E7F71A9C3BE500BFDD3C /* Sources */,
 				C551E7F81A9C3BE500BFDD3C /* Frameworks */,
@@ -129,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = LinAlg;
-			productName = LinAlg;
-			productReference = C551E7FC1A9C3BE500BFDD3C /* LinAlg.framework */;
+			name = SKLinearAlgebra;
+			productName = SKLinearAlgebra;
+			productReference = C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C551E8061A9C3BE500BFDD3C /* LinAlgTests */ = {
+		C551E8061A9C3BE500BFDD3C /* SKLinearAlgebraTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C551E8151A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "LinAlgTests" */;
+			buildConfigurationList = C551E8151A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "SKLinearAlgebraTests" */;
 			buildPhases = (
 				C551E8031A9C3BE500BFDD3C /* Sources */,
 				C551E8041A9C3BE500BFDD3C /* Frameworks */,
@@ -147,9 +156,9 @@
 			dependencies = (
 				C551E80A1A9C3BE500BFDD3C /* PBXTargetDependency */,
 			);
-			name = LinAlgTests;
-			productName = LinAlgTests;
-			productReference = C551E8071A9C3BE500BFDD3C /* LinAlgTests.xctest */;
+			name = SKLinearAlgebraTests;
+			productName = SKLinearAlgebraTests;
+			productReference = C551E8071A9C3BE500BFDD3C /* SKLinearAlgebraTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -163,13 +172,14 @@
 				TargetAttributes = {
 					C551E7FB1A9C3BE500BFDD3C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 6D9DLTQJSN;
 					};
 					C551E8061A9C3BE500BFDD3C = {
 						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
-			buildConfigurationList = C551E7F61A9C3BE500BFDD3C /* Build configuration list for PBXProject "LinAlg" */;
+			buildConfigurationList = C551E7F61A9C3BE500BFDD3C /* Build configuration list for PBXProject "SKLinearAlgebra" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -181,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C551E7FB1A9C3BE500BFDD3C /* LinAlg */,
-				C551E8061A9C3BE500BFDD3C /* LinAlgTests */,
+				C551E7FB1A9C3BE500BFDD3C /* SKLinearAlgebra */,
+				C551E8061A9C3BE500BFDD3C /* SKLinearAlgebraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58194631A9D029000A11626 /* Vector3.swift in Sources */,
+				C58194651A9D040B00A11626 /* Vector4.swift in Sources */,
+				C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C551E80F1A9C3BE500BFDD3C /* LinAlgTests.swift in Sources */,
+				C551E81A1A9C3C2400BFDD3C /* LinearAlgebra.swift in Sources */,
+				C58194661A9D070300A11626 /* Vector4.swift in Sources */,
+				C58194671A9D070300A11626 /* Vector3.swift in Sources */,
+				C551E80F1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +241,7 @@
 /* Begin PBXTargetDependency section */
 		C551E80A1A9C3BE500BFDD3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C551E7FB1A9C3BE500BFDD3C /* LinAlg */;
+			target = C551E7FB1A9C3BE500BFDD3C /* SKLinearAlgebra */;
 			targetProxy = C551E8091A9C3BE500BFDD3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -267,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -308,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,29 +337,37 @@
 		C551E8131A9C3BE500BFDD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LinAlg/Info.plist;
+				INFOPLIST_FILE = SKLinearAlgebra/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				"INSTALL_PATH[sdk=*]" = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SKLinearAlgebra;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C551E8141A9C3BE500BFDD3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LinAlg/Info.plist;
+				INFOPLIST_FILE = SKLinearAlgebra/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SKLinearAlgebra;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -359,9 +383,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = LinAlgTests/Info.plist;
+				INFOPLIST_FILE = SKLinearAlgebraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SKLinearAlgebraTests;
 			};
 			name = Debug;
 		};
@@ -372,16 +396,16 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = LinAlgTests/Info.plist;
+				INFOPLIST_FILE = SKLinearAlgebraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SKLinearAlgebraTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C551E7F61A9C3BE500BFDD3C /* Build configuration list for PBXProject "LinAlg" */ = {
+		C551E7F61A9C3BE500BFDD3C /* Build configuration list for PBXProject "SKLinearAlgebra" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C551E8101A9C3BE500BFDD3C /* Debug */,
@@ -390,21 +414,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C551E8121A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "LinAlg" */ = {
+		C551E8121A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "SKLinearAlgebra" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C551E8131A9C3BE500BFDD3C /* Debug */,
 				C551E8141A9C3BE500BFDD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		C551E8151A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "LinAlgTests" */ = {
+		C551E8151A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "SKLinearAlgebraTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C551E8161A9C3BE500BFDD3C /* Debug */,
 				C551E8171A9C3BE500BFDD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
