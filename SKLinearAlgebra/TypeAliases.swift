@@ -5,6 +5,9 @@
 //  Created by Cameron Little on 2/24/15.
 //  Copyright (c) 2015 Cameron Little. All rights reserved.
 //
+//
+//  These aliases should eventually help developers organize their code and
+//  be more efficient.
 
 import Foundation
 import SceneKit
@@ -24,5 +27,7 @@ typealias Rotation = SCNVector4
 typealias Torque = SCNVector4
 typealias Color = SCNVector4
 typealias ColorRange = SCNVector4
+
+typealias Quaternion = SCNQuaternion
 
 typealias Transform = SCNMatrix4
