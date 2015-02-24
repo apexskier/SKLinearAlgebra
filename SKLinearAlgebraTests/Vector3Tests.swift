@@ -60,14 +60,19 @@ class Vector3Tests: XCTestCase {
     }
 
     func testCrossProduct() {
-        let a = SCNVector3(x: 3, y: -3, z: 1)
-        let b = SCNVector3(x: 4, y: 9, z: 2)
-        let c = SCNVector3(x: -15, y: -2, z: 39)
+        let a = SCNVector3(x: 2, y: 1, z: -1)
+        let b = SCNVector3(x: -3, y: 4, z: 1)
 
-        XCTAssertEqual(a × b, c, "Cross product successful")
-        XCTAssertEqual(cross(a, b), c, "Cross product convenience method successful")
+        let resultab = SCNVector3(x: 5, y: 1, z: 11)
+        let resultba = SCNVector3(x: -5, y: -1, z: -11)
 
-        let d = SCNVector3(x: 3, y: -3, z: 1)
+        XCTAssertEqual(a × b, resultab, "Cross product successful")
+        XCTAssertEqual(b × a, resultba, "Cross product successful")
+
+        XCTAssertEqual(cross(a, b), resultab, "Cross product convenience method successful")
+        XCTAssertEqual(cross(b, a), resultba, "Cross product convenience method successful")
+
+        let d = SCNVector3(x: 3, y: -3, z: -1)
         let e = SCNVector3(x: -12, y: 12, z: 4)
 
         XCTAssertEqual(d × e, SCNVector3Zero, "Cross product successful")

@@ -17,6 +17,10 @@ extension SCNVector3: Equatable, Vector {
     public func copy() -> SCNVector3 {
         return SCNVector3(x: x, y: y, z: z)
     }
+
+    public var description: String {
+        return "[\(x), \(y), \(z)]"
+    }
 }
 
 public func ==(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
@@ -33,7 +37,7 @@ public func * (left: SCNVector3, right: SCNVector3) -> Float {
 
 public func × (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     let x = left.y*right.z - left.z*right.y
-    let y = left.x*right.z - left.z*right.x
+    let y = left.z*right.x - left.x*right.z
     let z = left.x*right.y - left.y*right.x
 
     return SCNVector3(x: x, y: y, z: z)
