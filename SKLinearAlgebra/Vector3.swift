@@ -43,10 +43,6 @@ public func × (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     return SCNVector3(x: x, y: y, z: z)
 }
 
-public func cross(a: SCNVector3, b: SCNVector3) -> SCNVector3 {
-    return a × b
-}
-
 // Scalar multiplication
 
 public func * (left: SCNVector3, right: Float) -> SCNVector3 {

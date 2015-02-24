@@ -45,9 +45,6 @@ public func × (left: SCNVector4, right: SCNVector4) -> SCNVector4 {
     return SCNVector4(x: x, y: y, z: z, w: w)
 }
 
-public func cross(a: SCNVector4, b: SCNVector4) -> SCNVector4 {
-    return a × b
-}
 
 // Scalar multiplication
 

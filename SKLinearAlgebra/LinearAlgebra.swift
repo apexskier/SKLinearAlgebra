@@ -22,6 +22,8 @@ public protocol Vector {
 
     func /(lhs: Self, rhs: Float) -> Self
     func /(lhs: Self, rhs: Int) -> Self
+
+    func ×(lhs: Self, rhs: Self) -> Self
 }
 
 public protocol Matrix {
@@ -37,6 +39,10 @@ public protocol Matrix {
 }
 
 infix operator × { } // Cross product
+
+public func cross<T:Vector> (a: T, b: T) -> T {
+    return a × b
+}
 
 public func * (left: SCNMatrix4, right: SCNVector4) -> SCNVector4 {
     let x = left.m11*right.x + left.m21*right.y + left.m31*right.z
