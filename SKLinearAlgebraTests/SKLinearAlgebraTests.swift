@@ -9,6 +9,8 @@
 import XCTest
 import SceneKit
 
+private let EPSILON: Float = 0.001
+
 class SKLinearAlgebraTests: XCTestCase {
 
     override func setUp() {
@@ -39,8 +41,18 @@ class SKLinearAlgebraTests: XCTestCase {
     }
 
     func testDegreesBetweenVectors() {
-        //TODO
-        XCTFail("Not Implemented")
+        let a = SCNVector3(x: 1, y: 2, z: 3)
+        let b = SCNVector3(x: 2, y: 4, z: 6)
+        let c = SCNVector3(x: -1, y: -2, z: -3)
+
+        XCTAssertEqualWithAccuracy(degrees(a, a), 0, EPSILON, "Same vector is parallel")
+        XCTAssertEqualWithAccuracy(degrees(a, b), 0, EPSILON, "Parallel vectors are parallel")
+        XCTAssertEqualWithAccuracy(degrees(a, c), Float(M_PI), EPSILON, "Opposite vectors are opposite")
+
+        let p = SCNVector3(x: 4, y: 0, z: 7)
+        let q = SCNVector3(x: -2, y: 1, z: 3)
+
+        XCTAssertEqualWithAccuracy(degrees(p, q), 1.1252, EPSILON, "Random vectors have correct degrees.")
     }
 
     func testVectorComponent() {

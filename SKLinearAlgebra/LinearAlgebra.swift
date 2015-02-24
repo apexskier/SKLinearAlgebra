@@ -55,7 +55,12 @@ public func normalize<T: Vector> (vec: T) -> T {
 }
 
 public func degrees<T:Vector> (left: T, right: T) -> Float {
-    return cos((left * right) / (magnitude(left) * magnitude(right)))
+    let ml = magnitude(left)
+    let mr = magnitude(right)
+    if ml == 0 || mr == 0 {
+        fatalError("Zero vector provided to degrees")
+    }
+    return acos((left * right) / (ml * mr))
 }
 
 public func component<T:Vector> (b: T, a: T) -> Float {
