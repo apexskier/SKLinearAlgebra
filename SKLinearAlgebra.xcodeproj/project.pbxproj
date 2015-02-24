@@ -19,6 +19,8 @@
 		C581946B1A9D09D000A11626 /* Vector3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946A1A9D09D000A11626 /* Vector3Tests.swift */; };
 		C581946D1A9D24C600A11626 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C581946C1A9D24C600A11626 /* README.md */; };
 		C581946F1A9D38A800A11626 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946E1A9D38A800A11626 /* Matrix4.swift */; };
+		C58194711A9D3A7700A11626 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194701A9D3A7700A11626 /* TypeAliases.swift */; };
+		C58194721A9D3C5600A11626 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194701A9D3A7700A11626 /* TypeAliases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		C581946A1A9D09D000A11626 /* Vector3Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3Tests.swift; sourceTree = "<group>"; };
 		C581946C1A9D24C600A11626 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C581946E1A9D38A800A11626 /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
+		C58194701A9D3A7700A11626 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */,
+				C58194701A9D3A7700A11626 /* TypeAliases.swift */,
 				C581946E1A9D38A800A11626 /* Matrix4.swift */,
 				C58194641A9D040B00A11626 /* Vector4.swift */,
 				C58194621A9D029000A11626 /* Vector3.swift */,
@@ -234,6 +238,7 @@
 				C581946F1A9D38A800A11626 /* Matrix4.swift in Sources */,
 				C58194631A9D029000A11626 /* Vector3.swift in Sources */,
 				C58194651A9D040B00A11626 /* Vector4.swift in Sources */,
+				C58194711A9D3A7700A11626 /* TypeAliases.swift in Sources */,
 				C581946D1A9D24C600A11626 /* README.md in Sources */,
 				C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */,
 			);
@@ -248,6 +253,7 @@
 				C581946B1A9D09D000A11626 /* Vector3Tests.swift in Sources */,
 				C58194671A9D070300A11626 /* Vector3.swift in Sources */,
 				C58194691A9D096E00A11626 /* Vector4Tests.swift in Sources */,
+				C58194721A9D3C5600A11626 /* TypeAliases.swift in Sources */,
 				C551E80F1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

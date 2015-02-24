@@ -3,7 +3,7 @@
 Linear Algebra extensions for SceneKit
 
 This library allows common vector operations using SceneKit's
-[native types](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_DataTypes/index.html#//apple_ref/c/tdef/SCNQuaternion): 
+[native types](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_DataTypes/): 
 `SCNVector3`, `SCNVector4`, and `SCNMatrix4`. It also provides useful
 linear algebra functions for 3D graphics.
 
