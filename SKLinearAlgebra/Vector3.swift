@@ -10,16 +10,8 @@ import Foundation
 import SceneKit
 
 extension SCNVector3: Equatable, Vector {
-    public var magnitude: Float {
-        return sqrt(self * self)
-    }
-
     public func to4(w: Float) -> SCNVector4 {
         return SCNVector4(x: x, y: y, z: z, w: w)
-    }
-
-    public func normalize() -> SCNVector3 {
-        return self / magnitude
     }
 
     public func copy() -> SCNVector3 {

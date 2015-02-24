@@ -10,8 +10,6 @@ import Foundation
 import SceneKit
 
 public protocol Vector {
-    var magnitude: Float { get }
-
     func +(lhs: Self, rhs: Self) -> Self
     func -(lhs: Self, rhs: Self) -> Self
 
@@ -48,19 +46,23 @@ public func * (left: SCNMatrix4, right: SCNVector4) -> SCNVector4 {
     return SCNVector4(x: x, y: y, z: z, w: right.w * left.m44)
 }
 
+public func magnitude<T: Vector> (vec: T) -> Float {
+    return sqrt(vec * vec)
+}
+
+public func normalize<T: Vector> (vec: T) -> T {
+    return vec / magnitude(vec)
+}
+
 public func degrees<T:Vector> (left: T, right: T) -> Float {
-    return cos((left * right) / (left.magnitude * right.magnitude))
+    return cos((left * right) / (magnitude(left) * magnitude(right)))
 }
 
 public func component<T:Vector> (b: T, a: T) -> Float {
-    return (a * b) / a.magnitude
+    return (a * b) / magnitude(a)
 }
 
 public func projection<T:Vector> (b: T, a: T) -> T {
     let adotb = a * b
-    return (adotb / pow(a.magnitude, 2)) * a
-}
-
-public func normalize<T: Vector> (vec: T) -> T {
-    return vec / vec.magnitude
+    return (adotb / pow(magnitude(a), 2)) * a
 }
