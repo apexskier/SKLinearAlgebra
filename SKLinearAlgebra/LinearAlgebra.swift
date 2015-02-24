@@ -24,6 +24,9 @@ public protocol Vector {
     func /(lhs: Self, rhs: Int) -> Self
 
     func ×(lhs: Self, rhs: Self) -> Self
+
+    func ≈(lhs: Self, rhs: Self) -> Bool
+    func !≈(lhs: Self, rhs: Self) -> Bool
 }
 
 public protocol Matrix {
@@ -39,6 +42,10 @@ public protocol Matrix {
 }
 
 infix operator × { } // Cross product
+
+infix operator ≈ { } // Equivalent
+
+infix operator !≈ { } // Not equivalent
 
 public func cross<T:Vector> (a: T, b: T) -> T {
     return a × b
@@ -57,7 +64,11 @@ public func magnitude<T: Vector> (vec: T) -> Float {
 }
 
 public func normalize<T: Vector> (vec: T) -> T {
-    return vec / magnitude(vec)
+    let vmag = magnitude(vec)
+    if vmag == 0 {
+        fatalError("Zero vector provided to normalize")
+    }
+    return vec / vmag
 }
 
 public func degrees<T:Vector> (left: T, right: T) -> Float {
@@ -69,11 +80,32 @@ public func degrees<T:Vector> (left: T, right: T) -> Float {
     return acos((left * right) / (ml * mr))
 }
 
-public func component<T:Vector> (b: T, a: T) -> Float {
-    return (a * b) / magnitude(a)
+/* comp_{b} a
+ * result is the length of vector a on vector b
+ *
+ *              b
+ *              |
+ *              |
+ *            { |   / a
+ * comp(a, b) { |  /
+ *            { | /
+ *
+ */
+public func component<T:Vector> (a: T, b: T) -> Float {
+    let bmag = magnitude(b)
+    if bmag == 0 {
+        fatalError("Zero vector provided to component")
+    }
+    return (a * b) / bmag
 }
 
-public func projection<T:Vector> (b: T, a: T) -> T {
+/* proj_{b} a 
+ */
+public func projection<T:Vector> (a: T, b: T) -> T {
+    let magb = magnitude(b)
+    if magb == 0 {
+        fatalError("Zero vector provided to projection")
+    }
     let adotb = a * b
-    return (adotb / pow(magnitude(a), 2)) * a
+    return (adotb / pow(magb, 2)) * b
 }

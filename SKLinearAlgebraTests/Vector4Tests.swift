@@ -30,6 +30,15 @@ class Vector4Tests: XCTestCase {
         XCTAssertTrue(b != C, "Vector4 is equitable (!=)")
     }
 
+    func testEquivalence() {
+        let b = SCNVector4(x: 9, y: 5, z: 2, w: 1)
+        let B = SCNVector4(x: 9, y: 5, z: 2, w: 1)
+        let C = SCNVector4(x: 8, y: 5, z: 2, w: 1)
+
+        XCTAssertTrue(b == b, "Vector4 is equitable (==)")
+        XCTAssertTrue(b != C, "Vector4 is equitable (!=)")
+    }
+
     func testCopy() {
         let a = SCNVector4(x: 9, y: 5, z: 2, w: 1)
         let b = a.copy()

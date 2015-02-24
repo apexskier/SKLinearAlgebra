@@ -9,6 +9,8 @@
 import Foundation
 import SceneKit
 
+private let EPSILON: Float = 0.00001
+
 extension SCNVector3: Equatable, Vector {
     public func to4(w: Float) -> SCNVector4 {
         return SCNVector4(x: x, y: y, z: z, w: w)
@@ -21,10 +23,6 @@ extension SCNVector3: Equatable, Vector {
     public var description: String {
         return "[\(x), \(y), \(z)]"
     }
-}
-
-public func ==(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
-    return SCNVector3EqualToVector3(lhs, rhs)
 }
 
 // Dot product
@@ -41,6 +39,22 @@ public func × (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     let z = left.x*right.y - left.y*right.x
 
     return SCNVector3(x: x, y: y, z: z)
+}
+
+// Equality and equivalence
+
+public func ==(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
+    return SCNVector3EqualToVector3(lhs, rhs)
+}
+
+public func ≈(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
+    return abs(lhs.x - rhs.x) < EPSILON &&
+        abs(lhs.y - rhs.y) < EPSILON &&
+        abs(lhs.z - rhs.z) < EPSILON
+}
+
+public func !≈(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
+    return !(lhs ≈ rhs)
 }
 
 // Scalar multiplication

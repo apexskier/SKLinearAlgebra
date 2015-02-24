@@ -12,6 +12,11 @@ Tests are complete for all implemented features.
 
 ### Operations
 
+- equality (`==`)
+- inequality (`!=`)
+- equivalence (`≈`)
+  - returns true if the components of two vectos are close to equal to each other.
+- inequivalence (`!≈`)
 - vector addition (`+`)
 - vector subtraction (`-`)
 - dot product (`*`)
@@ -25,11 +30,10 @@ Tests are complete for all implemented features.
 - magnitude (`magnitude(v)`)
 - normalize (`normalize(v)`)
 - degrees between (`degrees(a, b)`)
-
-## TODO
-
-- component
-- projection
+- component (`component(a, b)`) - comp_{b} a
+  - Read this as "the component of a onto b", it would be written comp_{b} a.
+- projection (`projection(a, b)`)
+  - Read this as "the projection of a onto b", it would be written proj_{b} a
 
 ## Future Ideas
 
