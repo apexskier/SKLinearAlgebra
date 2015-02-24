@@ -10,11 +10,11 @@ useful linear algebra functions for 3D graphics.
 
 ### Operations
 
-- vector addition
-- vector subtraction
+- vector addition (`+`)
+- vector subtraction (`-`)
 - dot product (`*`)
-- scalar multiplication
-- scalar division
+- scalar multiplication (`*`)
+- scalar division (`\`)
 - cross product (`×`)
 
 ### Functions
