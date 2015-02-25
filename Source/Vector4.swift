@@ -8,6 +8,7 @@
 
 import Foundation
 import SceneKit
+import Surge
 
 extension SCNVector4: Equatable, Vector {
     public func to3() -> SCNVector3 {
@@ -37,6 +38,30 @@ extension SCNVector4: Equatable, Vector {
             fatalError("Index out of range")
         }
     }
+
+    private var floatArray: [Float] {
+        get {
+            return [x, y, z, w]
+        }
+        set {
+            x = newValue[0]
+            y = newValue[1]
+            z = newValue[2]
+            w = newValue[3]
+        }
+    }
+
+    private var doubleArray: [Double] {
+        get {
+            return [Double(x), Double(y), Double(z), Double(w)]
+        }
+        set {
+            x = Float(newValue[0])
+            y = Float(newValue[1])
+            z = Float(newValue[2])
+            w = Float(newValue[3])
+        }
+    }
 }
 
 // Equality and equivalence
@@ -59,7 +84,11 @@ public func !~=(lhs: SCNVector4, rhs: SCNVector4) -> Bool {
 // Dot product
 
 public func *(left: SCNVector4, right: SCNVector4) -> Float {
-    return (left.x * right.x + left.y * right.y + left.z * right.z)
+    return (left.x * right.x) + (left.y * right.y) + (left.z * right.z)
+}
+
+public func dot(left: SCNVector4, right: SCNVector4) -> Double {
+    return Surge.dot(left.floatArray, right.floatArray)
 }
 
 // Cross product

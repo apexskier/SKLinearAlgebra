@@ -75,6 +75,7 @@ class Vector4Tests: XCTestCase {
         let result: Float = 2
 
         XCTAssertEqual(a * b, result, "Dot product of Vector4 correct")
+        XCTAssertEqual(dot(a, b), result, "Dot product of Vector4 correct")
     }
 
     func testCrossProduct() {
