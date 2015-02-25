@@ -18,7 +18,8 @@ import SceneKit
  * TODO
  */
 
-typealias Position = SCNVector3
+public typealias Position = SCNVector3
+public typealias Direction = SCNVector3
 typealias Normal = SCNVector3
 typealias Scale = SCNVector3
 typealias Translate = SCNVector3

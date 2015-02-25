@@ -59,7 +59,7 @@ public func !≈(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
 
 // Scalar multiplication
 
-public func * (left: SCNVector3, right: Float) -> SCNVector3 {
+public func *(left: SCNVector3, right: Float) -> SCNVector3 {
     let x = left.x * right
     let y = left.y * right
     let z = left.z * right
@@ -67,7 +67,7 @@ public func * (left: SCNVector3, right: Float) -> SCNVector3 {
     return SCNVector3(x: x, y: y, z: z)
 }
 
-public func * (left: Float, right: SCNVector3) -> SCNVector3 {
+public func *(left: Float, right: SCNVector3) -> SCNVector3 {
     let x = right.x * left
     let y = right.y * left
     let z = right.z * left
@@ -75,17 +75,17 @@ public func * (left: Float, right: SCNVector3) -> SCNVector3 {
     return SCNVector3(x: x, y: y, z: z)
 }
 
-public func * (left: SCNVector3, right: Int) -> SCNVector3 {
+public func *(left: SCNVector3, right: Int) -> SCNVector3 {
     return left * Float(right)
 }
 
-public func * (left: Int, right: SCNVector3) -> SCNVector3 {
+public func *(left: Int, right: SCNVector3) -> SCNVector3 {
     return Float(left) * right
 }
 
 // Scalar Division
 
-public func / (left: SCNVector3, right: Float) -> SCNVector3 {
+public func /(left: SCNVector3, right: Float) -> SCNVector3 {
     let x = left.x / right
     let y = left.y / right
     let z = left.z / right
@@ -93,13 +93,13 @@ public func / (left: SCNVector3, right: Float) -> SCNVector3 {
     return SCNVector3(x: x, y: y, z: z)
 }
 
-public func / (left: SCNVector3, right: Int) -> SCNVector3 {
+public func /(left: SCNVector3, right: Int) -> SCNVector3 {
     return left / Float(right)
 }
 
 // Vector subtraction
 
-public func - (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+public func -(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     let x = left.x - right.x
     let y = left.y - right.y
     let z = left.z - right.z
@@ -109,7 +109,7 @@ public func - (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
 
 // Vector addition
 
-public func + (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+public func +(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     let x = left.x + right.x
     let y = left.y + right.y
     let z = left.z + right.z

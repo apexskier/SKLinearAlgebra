@@ -38,7 +38,7 @@ class SKLinearAlgebraTests: XCTestCase {
         let normAreal = SCNVector3(x: 3/m, y: 2/m, z: -5/m)
 
         XCTAssertEqual(normA, normAreal, "normalized vector correct")
-        XCTAssertEqual(magnitude(normA), 1, "normalized vector is length 1")
+        XCTAssertEqual(magnitude(normA), Float(1), "normalized vector is length 1")
     }
 
     func testDegreesBetweenVectors() {
@@ -46,14 +46,14 @@ class SKLinearAlgebraTests: XCTestCase {
         let b = SCNVector3(x: 2, y: 4, z: 6)
         let c = SCNVector3(x: -1, y: -2, z: -3)
 
-        XCTAssertEqualWithAccuracy(degrees(a, a), 0, EPSILON, "Same vector is parallel")
-        XCTAssertEqualWithAccuracy(degrees(a, b), 0, EPSILON, "Parallel vectors are parallel")
+        XCTAssertEqualWithAccuracy(degrees(a, a), Float(0), EPSILON, "Same vector is parallel")
+        XCTAssertEqualWithAccuracy(degrees(a, b), Float(0), EPSILON, "Parallel vectors are parallel")
         XCTAssertEqualWithAccuracy(degrees(a, c), Float(M_PI), EPSILON, "Opposite vectors are opposite")
 
         let p = SCNVector3(x: 4, y: 0, z: 7)
         let q = SCNVector3(x: -2, y: 1, z: 3)
 
-        XCTAssertEqualWithAccuracy(degrees(p, q), 1.1252, EPSILON, "Random vectors have correct degrees.")
+        XCTAssertEqualWithAccuracy(degrees(p, q), Float(1.1252), EPSILON, "Random vectors have correct degrees.")
     }
 
     func testVectorComponent() {
@@ -76,7 +76,7 @@ class SKLinearAlgebraTests: XCTestCase {
         let d = SCNVector3(x: 0, y: 0, z: 2)
         let e = SCNVector3(x: 1, y: 0, z: 0)
 
-        XCTAssertEqual(component(d, e), 0, "orthogonal vectors component is zero")
+        XCTAssertEqual(component(d, e), Float(0), "orthogonal vectors component is zero")
     }
 
     func testVectorProjection() {

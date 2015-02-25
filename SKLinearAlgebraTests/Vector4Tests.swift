@@ -64,8 +64,9 @@ class Vector4Tests: XCTestCase {
         // This is an example of a functional test case.
         let a = SCNVector4(x: 0, y: 3, z: -7, w: 0)
         let b = SCNVector4(x: 2, y: 3, z: 1, w: 0)
+        let result: Float = 2
 
-        XCTAssertEqual(a * b, 2, "Dot product of Vector4 correct")
+        XCTAssertEqual(a * b, result, "Dot product of Vector4 correct")
     }
 
     func testCrossProduct() {

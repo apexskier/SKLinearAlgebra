@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54B5F311A9D40A400ED329F /* Basis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B5F301A9D40A400ED329F /* Basis.swift */; };
+		C54B5F331A9D563900ED329F /* Matrix4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B5F321A9D563900ED329F /* Matrix4Tests.swift */; };
+		C54B5F341A9D5C5100ED329F /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946E1A9D38A800A11626 /* Matrix4.swift */; };
 		C551E8081A9C3BE500BFDD3C /* SKLinearAlgebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */; };
 		C551E80F1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */; };
 		C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */; };
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C54B5F301A9D40A400ED329F /* Basis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basis.swift; sourceTree = "<group>"; };
+		C54B5F321A9D563900ED329F /* Matrix4Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4Tests.swift; sourceTree = "<group>"; };
 		C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKLinearAlgebra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C551E8001A9C3BE500BFDD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C551E8071A9C3BE500BFDD3C /* SKLinearAlgebraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKLinearAlgebraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */,
+				C54B5F301A9D40A400ED329F /* Basis.swift */,
 				C58194701A9D3A7700A11626 /* TypeAliases.swift */,
 				C581946E1A9D38A800A11626 /* Matrix4.swift */,
 				C58194641A9D040B00A11626 /* Vector4.swift */,
@@ -114,6 +120,7 @@
 			children = (
 				C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */,
 				C58194681A9D096E00A11626 /* Vector4Tests.swift */,
+				C54B5F321A9D563900ED329F /* Matrix4Tests.swift */,
 				C581946A1A9D09D000A11626 /* Vector3Tests.swift */,
 				C551E80C1A9C3BE500BFDD3C /* Supporting Files */,
 			);
@@ -240,6 +247,7 @@
 				C58194651A9D040B00A11626 /* Vector4.swift in Sources */,
 				C58194711A9D3A7700A11626 /* TypeAliases.swift in Sources */,
 				C581946D1A9D24C600A11626 /* README.md in Sources */,
+				C54B5F311A9D40A400ED329F /* Basis.swift in Sources */,
 				C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,12 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C551E81A1A9C3C2400BFDD3C /* LinearAlgebra.swift in Sources */,
+				C54B5F331A9D563900ED329F /* Matrix4Tests.swift in Sources */,
 				C58194661A9D070300A11626 /* Vector4.swift in Sources */,
 				C581946B1A9D09D000A11626 /* Vector3Tests.swift in Sources */,
 				C58194671A9D070300A11626 /* Vector3.swift in Sources */,
 				C58194691A9D096E00A11626 /* Vector4Tests.swift in Sources */,
 				C58194721A9D3C5600A11626 /* TypeAliases.swift in Sources */,
 				C551E80F1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift in Sources */,
+				C54B5F341A9D5C5100ED329F /* Matrix4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
