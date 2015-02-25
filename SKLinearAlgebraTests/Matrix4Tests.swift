@@ -15,10 +15,60 @@ class Matrix4Tests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+
+    func testMatrix() {
+        let m = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 4, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+
+        XCTAssertEqual(m.m11, Float(1), "m11")
+        XCTAssertEqual(m.m12, Float(2), "m12")
+        XCTAssertEqual(m.m13, Float(3), "m13")
+        XCTAssertEqual(m.m14, Float(4), "m14")
+        XCTAssertEqual(m.m21, Float(5), "m21")
+        XCTAssertEqual(m.m22, Float(6), "m22")
+        XCTAssertEqual(m.m23, Float(7), "m23")
+        XCTAssertEqual(m.m24, Float(8), "m24")
+        XCTAssertEqual(m.m31, Float(2), "m31")
+        XCTAssertEqual(m.m32, Float(6), "m32")
+        XCTAssertEqual(m.m33, Float(4), "m33")
+        XCTAssertEqual(m.m34, Float(8), "m34")
+        XCTAssertEqual(m.m41, Float(3), "m41")
+        XCTAssertEqual(m.m42, Float(1), "m42")
+        XCTAssertEqual(m.m43, Float(1), "m43")
+        XCTAssertEqual(m.m44, Float(2), "m44")
+    }
+
+    func testAltMatrixCreate() {
+        let m = SCNMatrix4Make(
+            SCNVector4(x: 1, y: 2, z: 3, w: 4),
+            SCNVector4(x: 5, y: 6, z: 7, w: 8),
+            SCNVector4(x: 2, y: 6, z: 4, w: 8),
+            SCNVector4(x: 3, y: 1, z: 1, w: 2))
+
+        XCTAssertEqual(m.m11, Float(1), "m11")
+        XCTAssertEqual(m.m12, Float(2), "m12")
+        XCTAssertEqual(m.m13, Float(3), "m13")
+        XCTAssertEqual(m.m14, Float(4), "m14")
+        XCTAssertEqual(m.m21, Float(5), "m21")
+        XCTAssertEqual(m.m22, Float(6), "m22")
+        XCTAssertEqual(m.m23, Float(7), "m23")
+        XCTAssertEqual(m.m24, Float(8), "m24")
+        XCTAssertEqual(m.m31, Float(2), "m31")
+        XCTAssertEqual(m.m32, Float(6), "m32")
+        XCTAssertEqual(m.m33, Float(4), "m33")
+        XCTAssertEqual(m.m34, Float(8), "m34")
+        XCTAssertEqual(m.m41, Float(3), "m41")
+        XCTAssertEqual(m.m42, Float(1), "m42")
+        XCTAssertEqual(m.m43, Float(1), "m43")
+        XCTAssertEqual(m.m44, Float(2), "m44")
     }
 
     func testDeterminant() {
@@ -30,7 +80,7 @@ class Matrix4Tests: XCTestCase {
 
         let d = det(m)
 
-        XCTAssertEqual(d, Float(27), "determinate of matrix")
+        XCTAssertEqual(d, Float(72), "determinate of matrix")
 
         let m2 = SCNMatrix4(
             m11: 3, m12: 2, m13: -1, m14: 4,

@@ -63,50 +63,6 @@ public func ==(lhs: SCNMatrix4, rhs: SCNMatrix4) -> Bool {
 }
 
 public func det(m: SCNMatrix4) -> Float {
-/*
-    let m11m22m33m44 = m.m11 * m.m22 * m.m33 * m.m44
-    let m11m23m34m42 = m.m11 * m.m23 * m.m34 * m.m42
-    let m11m24m32m43 = m.m11 * m.m24 * m.m32 * m.m43
-
-    let m12m21m34m43 = m.m12 * m.m21 * m.m34 * m.m43
-    let m12m23m31m44 = m.m12 * m.m23 * m.m31 * m.m44
-    let m12m24m33m41 = m.m12 * m.m24 * m.m33 * m.m41
-
-    let m13m21m32m44 = m.m13 * m.m21 * m.m32 * m.m44
-    let m13m22m34m41 = m.m13 * m.m22 * m.m34 * m.m41
-    let m13m24m31m42 = m.m13 * m.m24 * m.m31 * m.m42
-
-    let m14m22m34m43 = m.m14 * m.m22 * m.m34 * m.m43
-    let m14m22m31m43 = m.m14 * m.m22 * m.m31 * m.m43
-    let m14m23m32m31 = m.m14 * m.m23 * m.m32 * m.m31
-
-    let m11m22m34m43 = m.m11 * m.m22 * m.m34 * m.m43
-    let m11m23m34m41 = m.m11 * m.m23 * m.m34 * m.m41
-    let m11m24m33m42 = m.m11 * m.m24 * m.m33 * m.m42
-
-    let m12m21m33m44 = m.m12 * m.m21 * m.m33 * m.m44
-    let m12m23m34m41 = m.m12 * m.m23 * m.m34 * m.m41
-    let m12m24m31m43 = m.m12 * m.m24 * m.m31 * m.m43
-
-    let m13m21m34m42 = m.m13 * m.m21 * m.m34 * m.m42
-    let m13m22m31m44 = m.m13 * m.m22 * m.m31 * m.m44
-    let m13m24m32m41 = m.m13 * m.m24 * m.m32 * m.m41
-
-    let m14m21m32m43 = m.m14 * m.m21 * m.m32 * m.m43
-    let m14m22m33m41 = m.m14 * m.m22 * m.m33 * m.m41
-    let m14m23m31m42 = m.m14 * m.m23 * m.m31 * m.m42
-
-    return m11m22m33m44 + m11m23m34m42 + m11m24m32m43
-        + m12m21m34m43 + m12m23m31m44 + m13m24m31m42
-        + m13m21m32m44 + m13m22m34m41 + m13m24m31m42
-        + m14m22m34m43 + m14m22m31m43 + m14m23m32m31
-        - m11m22m34m43 - m11m23m34m41 - m11m24m33m42
-        - m12m21m33m44 - m12m23m34m41 - m11m24m33m42
-        - m13m21m34m42 - m13m22m31m44 - m13m24m32m41
-        - m14m21m32m43 - m14m22m33m41 - m14m23m31m42
-
-*/
-
     let a = (m.m14 * m.m23 * m.m32 * m.m41) - (m.m13 * m.m24 * m.m32 * m.m41)
     let b = (m.m14 * m.m22 * m.m33 * m.m41) + (m.m12 * m.m24 * m.m33 * m.m41)
     let c = (m.m13 * m.m22 * m.m34 * m.m41) - (m.m12 * m.m23 * m.m34 * m.m41)
