@@ -30,6 +30,15 @@ class Vector3Tests: XCTestCase {
         XCTAssertTrue(b != C, "Vector3 is equitable (!=)")
     }
 
+    func testEquivalence() {
+        let b = SCNVector3(x: 9, y: 5, z: 2)
+        let B = SCNVector3(x: 9, y: 5, z: 2)
+        let C = SCNVector3(x: 8, y: 5, z: 2)
+
+        XCTAssertTrue(b ~= b, "Vector4 is equitable (~=)")
+        XCTAssertTrue(b !~= C, "Vector4 is equitable (!~=)")
+    }
+
     func testCopy() {
         let a = SCNVector3(x: 9, y: 5, z: 2)
         let b = a.copy()
@@ -40,6 +49,14 @@ class Vector3Tests: XCTestCase {
         let c = SCNVector4(x: 3, y: 5, z: 2, w: 1)
         XCTAssertEqual(b, c, "Vector 4 didn't mutate first")
         XCTAssertNotEqual(a, b, "Vector 4 copy didn't mutate.")*/
+    }
+
+    func testSubscript() {
+        let a = SCNVector3(x: 9, y: 4, z: 2)
+
+        XCTAssertEqual(a[0], Float(9), "first subscript works")
+        XCTAssertEqual(a[1], Float(4), "second subscript works")
+        XCTAssertEqual(a[2], Float(2), "third subscript works")
     }
 
     func testVectorConversion3to4() {

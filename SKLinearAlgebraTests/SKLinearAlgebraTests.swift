@@ -95,14 +95,14 @@ class SKLinearAlgebraTests: XCTestCase {
 
         println(projection(a, b).description)
         println(result.description)
-        XCTAssertTrue(projection(a, b) ≈ result, "projection test")
+        XCTAssertTrue(projection(a, b) ~= result, "projection test")
 
 
         let d = SCNVector4(x: 0, y: 1, z: -1, w: 0)
         let c = SCNVector4(x: 0, y: 1, z: 0, w: 1)
         let e = SCNVector4(x: 0, y: 0.5, z: -0.5, w: 0)
 
-        XCTAssertTrue(projection(c, d) ≈ e, "projection test 2")
+        XCTAssertTrue(projection(c, d) ~= e, "projection test 2")
     }
 
 }

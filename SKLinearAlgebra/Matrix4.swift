@@ -14,6 +14,249 @@ extension SCNMatrix4: Matrix {
         return SCNMatrix4(m11: m11, m12: m12, m13: m13, m14: m14, m21: m21, m22: m22, m23: m23, m24: m24, m31: m31, m32: m32, m33: m33, m34: m34, m41: m41, m42: m42, m43: m43, m44: m44)
     }
 
+    // Subscript with 0 based indexing
+    /*subscript(col: Int, row: Int) -> Float {
+        get {
+            assert((0 <= row && row < 4) && (0 <= col && col < 4), "Index out of range")
+            switch row {
+            case 0:
+                switch col {
+                case 0:
+                    return m11
+                case 1:
+                    return m12
+                case 2:
+                    return m13
+                case 3:
+                    return m14
+                default:
+                    fatalError("Index out of range")
+                }
+            case 1:
+                switch col {
+                case 0:
+                    return m21
+                case 1:
+                    return m22
+                case 2:
+                    return m23
+                case 3:
+                    return m24
+                default:
+                    fatalError("Index out of range")
+                }
+            case 2:
+                switch col {
+                case 0:
+                    return m31
+                case 1:
+                    return m32
+                case 2:
+                    return m33
+                case 3:
+                    return m34
+                default:
+                    fatalError("Index out of range")
+                }
+            case 3:
+                switch col {
+                case 0:
+                    return m41
+                case 1:
+                    return m42
+                case 2:
+                    return m43
+                case 3:
+                    return m44
+                default:
+                    fatalError("Index out of range")
+                }
+            default:
+                fatalError("Index out of range")
+            }
+        }
+        set {
+            assert((0 <= row && row < 4) && (0 <= col && col < 4), "Index out of range")
+            switch row {
+            case 0:
+                switch col {
+                case 0:
+                    m11 = newValue
+                case 1:
+                    m12 = newValue
+                case 2:
+                    m13 = newValue
+                case 3:
+                    m14 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            case 1:
+                switch col {
+                case 0:
+                    m21 = newValue
+                case 1:
+                    m22 = newValue
+                case 2:
+                    m23 = newValue
+                case 3:
+                    m24 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            case 2:
+                switch col {
+                case 0:
+                    m31 = newValue
+                case 1:
+                    m32 = newValue
+                case 2:
+                    m33 = newValue
+                case 3:
+                    m34 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            case 3:
+                switch col {
+                case 0:
+                    m41 = newValue
+                case 1:
+                    m42 = newValue
+                case 2:
+                    m43 = newValue
+                case 3:
+                    m44 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            default:
+                fatalError("Index out of range")
+            }
+        }
+    }*/
+
+    subscript(row: Int, col: Int) -> Float {
+        get {
+            assert((0 <= row && row < 4) && (0 <= col && col < 4), "Index out of range")
+            switch row {
+            case 0:
+                switch col {
+                case 0:
+                    return m11
+                case 1:
+                    return m21
+                case 2:
+                    return m31
+                case 3:
+                    return m41
+                default:
+                    fatalError("Index out of range")
+                }
+            case 1:
+                switch col {
+                case 0:
+                    return m12
+                case 1:
+                    return m22
+                case 2:
+                    return m32
+                case 3:
+                    return m42
+                default:
+                    fatalError("Index out of range")
+                }
+            case 2:
+                switch col {
+                case 0:
+                    return m13
+                case 1:
+                    return m23
+                case 2:
+                    return m33
+                case 3:
+                    return m43
+                default:
+                    fatalError("Index out of range")
+                }
+            case 3:
+                switch col {
+                case 0:
+                    return m14
+                case 1:
+                    return m24
+                case 2:
+                    return m34
+                case 3:
+                    return m44
+                default:
+                    fatalError("Index out of range")
+                }
+            default:
+                fatalError("Index out of range")
+            }
+        }
+        set {
+            assert((0 <= row && row < 4) && (0 <= col && col < 4), "Index out of range")
+            switch row {
+            case 0:
+                switch col {
+                case 0:
+                    m11 = newValue
+                case 1:
+                    m12 = newValue
+                case 2:
+                    m13 = newValue
+                case 3:
+                    m14 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            case 1:
+                switch col {
+                case 0:
+                    m21 = newValue
+                case 1:
+                    m22 = newValue
+                case 2:
+                    m23 = newValue
+                case 3:
+                    m24 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            case 2:
+                switch col {
+                case 0:
+                    m31 = newValue
+                case 1:
+                    m32 = newValue
+                case 2:
+                    m33 = newValue
+                case 3:
+                    m34 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            case 3:
+                switch col {
+                case 0:
+                    m41 = newValue
+                case 1:
+                    m42 = newValue
+                case 2:
+                    m43 = newValue
+                case 3:
+                    m44 = newValue
+                default:
+                    fatalError("Index out of range")
+                }
+            default:
+                fatalError("Index out of range")
+            }
+        }
+    }
+
     public var description: String {
         return "[[\(m11), \(m12), \(m13), \(m14)]\n" +
             " [\(m21), \(m22), \(m23), \(m24)]\n" +
@@ -22,7 +265,7 @@ extension SCNMatrix4: Matrix {
     }
 }
 
-public func SCNMatrix4Make(x: SCNVector4, y: SCNVector4, z: SCNVector4, w: SCNVector4) -> SCNMatrix4 {
+public func SCNMatrix4MakeColumns(x: SCNVector4, y: SCNVector4, z: SCNVector4, w: SCNVector4) -> SCNMatrix4 {
     return SCNMatrix4(
         m11: x.x, m12: x.y, m13: x.z, m14: x.w,
         m21: y.x, m22: y.y, m23: y.z, m24: y.w,
@@ -62,28 +305,22 @@ public func ==(lhs: SCNMatrix4, rhs: SCNMatrix4) -> Bool {
     return SCNMatrix4EqualToMatrix4(lhs, rhs)
 }
 
+// Referenced from the following
+// https://bitbucket.org/eigen/eigen/src/968c30931d04a35c8b02d1bb386e690b45dc275c/Eigen/src/LU/Determinant.h?at=default#cl-75
+private func detHelper(matrix: SCNMatrix4, j: Int, k: Int, m: Int, n: Int) -> Float {
+    return (matrix[j, 0] * matrix[k, 1] - matrix[k, 0] * matrix[j, 1])
+         * (matrix[m, 2] * matrix[n, 3] - matrix[n, 2] * matrix[m, 3])
+}
 public func det(m: SCNMatrix4) -> Float {
-    let a = (m.m14 * m.m23 * m.m32 * m.m41) - (m.m13 * m.m24 * m.m32 * m.m41)
-    let b = (m.m14 * m.m22 * m.m33 * m.m41) + (m.m12 * m.m24 * m.m33 * m.m41)
-    let c = (m.m13 * m.m22 * m.m34 * m.m41) - (m.m12 * m.m23 * m.m34 * m.m41)
-    let d = (m.m14 * m.m23 * m.m31 * m.m42) + (m.m13 * m.m24 * m.m31 * m.m42)
-    let e = (m.m14 * m.m21 * m.m33 * m.m42) - (m.m11 * m.m24 * m.m33 * m.m42)
-    let f = (m.m13 * m.m21 * m.m34 * m.m42) + (m.m11 * m.m23 * m.m34 * m.m42)
-    let g = (m.m14 * m.m22 * m.m31 * m.m43) - (m.m12 * m.m24 * m.m31 * m.m43)
-    let h = (m.m14 * m.m21 * m.m32 * m.m43) + (m.m11 * m.m24 * m.m32 * m.m43)
-    let i = (m.m12 * m.m21 * m.m34 * m.m43) - (m.m11 * m.m22 * m.m34 * m.m43)
-    let j = (m.m13 * m.m22 * m.m31 * m.m44) + (m.m12 * m.m23 * m.m31 * m.m44)
-    let k = (m.m13 * m.m21 * m.m32 * m.m44) - (m.m11 * m.m23 * m.m32 * m.m44)
-    let l = (m.m12 * m.m21 * m.m33 * m.m44) + (m.m11 * m.m22 * m.m33 * m.m44)
-
-    return a - b + c - d + e - f + g - h + i - j + k - l
+    return detHelper(m, 0, 1, 2, 3)
+        - detHelper(m, 0, 2, 1, 3)
+        + detHelper(m, 0, 3, 1, 2)
+        + detHelper(m, 1, 2, 0, 3)
+        - detHelper(m, 1, 3, 0, 2)
+        + detHelper(m, 2, 3, 0, 1)
 }
 
 public func inverse(m: SCNMatrix4) -> SCNMatrix4? {
-    let detM = det(m)
-    if detM == 0 {
-        return nil
-    }
-
-    return m * (1 / detM)
+    // TODO
+    fatalError("Not implemented")
 }

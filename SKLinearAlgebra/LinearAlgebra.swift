@@ -29,8 +29,8 @@ public protocol Vector: Equatable, Printable, Copyable {
 
     func ×(lhs: Self, rhs: Self) -> Self
 
-    func ≈(lhs: Self, rhs: Self) -> Bool
-    func !≈(lhs: Self, rhs: Self) -> Bool
+    func ~=(lhs: Self, rhs: Self) -> Bool
+    func !~=(lhs: Self, rhs: Self) -> Bool
 }
 
 public protocol Matrix: Equatable, Printable, Copyable {
@@ -38,9 +38,9 @@ public protocol Matrix: Equatable, Printable, Copyable {
 
 infix operator × { } // Cross product
 
-infix operator ≈ { } // Equivalent
+infix operator ~= { } // Equivalent
 
-infix operator !≈ { } // Not equivalent
+infix operator !~= { } // Not equivalent
 
 public func cross<T:Vector> (a: T, b: T) -> T {
     return a × b

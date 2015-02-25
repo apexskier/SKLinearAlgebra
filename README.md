@@ -21,20 +21,23 @@ Tests are complete for all implemented features.
 
 - equality (`==`)
 - inequality (`!=`)
-- equivalence (`≈`)
-  - returns true if the components of two vectos are close to equal to each 
+- equivalence (`~=`)
+  - Returns true if the components of two vectos are close to equal to each 
     other.
-- inequivalence (`!≈`)
+- inequivalence (`!~=`)
 - vector addition (`+`)
 - vector subtraction (`-`)
 - dot product (`*`)
 - scalar multiplication (`*`)
 - scalar division (`\`)
 - cross product (`×`)
+- subscript access (`v[0]`, `m[1, 2]`)
+  - Zero based indexing
+  - Access by [row, column]
 
 ### Functions
 
-- cross product (`cross(a, b)`)
+- cross product (`cross(a: Vector, b: Vector)`)
 - magnitude (`magnitude(v)`)
 - normalize (`normalize(v)`)
 - degrees between (`degrees(a, b)`)
@@ -42,6 +45,7 @@ Tests are complete for all implemented features.
   - Read this as "the component of a onto b", it would be written comp_{b} a.
 - projection (`projection(a, b)`)
   - Read this as "the projection of a onto b", it would be written proj_{b} a
+- determinate (`det(m: Matrix)`)
 
 ## Future Ideas
 

@@ -47,11 +47,19 @@ class Matrix4Tests: XCTestCase {
     }
 
     func testAltMatrixCreate() {
-        let m = SCNMatrix4Make(
+        let m = SCNMatrix4MakeColumns(
             SCNVector4(x: 1, y: 2, z: 3, w: 4),
             SCNVector4(x: 5, y: 6, z: 7, w: 8),
             SCNVector4(x: 2, y: 6, z: 4, w: 8),
             SCNVector4(x: 3, y: 1, z: 1, w: 2))
+
+        let m2 = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 4, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+
+        XCTAssertTrue(m == m2, "matrix is equal")
 
         XCTAssertEqual(m.m11, Float(1), "m11")
         XCTAssertEqual(m.m12, Float(2), "m12")
@@ -69,6 +77,19 @@ class Matrix4Tests: XCTestCase {
         XCTAssertEqual(m.m42, Float(1), "m42")
         XCTAssertEqual(m.m43, Float(1), "m43")
         XCTAssertEqual(m.m44, Float(2), "m44")
+    }
+
+    func testSubscript() {
+        let m = SCNMatrix4MakeColumns(
+            SCNVector4(x: 1, y: 2, z: 3, w: 4),
+            SCNVector4(x: 5, y: 6, z: 7, w: 8),
+            SCNVector4(x: 2, y: 6, z: 4, w: 8),
+            SCNVector4(x: 3, y: 1, z: 1, w: 2))
+
+        XCTAssertEqual(m[0, 0], Float(1), "testing subscript")
+        XCTAssertEqual(m[3, 2], Float(8), "testing subscript")
+        XCTAssertEqual(m[3, 3], Float(2), "testing subscript")
+        XCTAssertEqual(m[1, 2], Float(6), "testing subscript")
     }
 
     func testDeterminant() {

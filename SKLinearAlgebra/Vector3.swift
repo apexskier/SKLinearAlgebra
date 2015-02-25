@@ -23,6 +23,20 @@ extension SCNVector3: Equatable, Vector {
     public var description: String {
         return "[\(x), \(y), \(z)]"
     }
+
+    subscript(i: Int) -> Float {
+        assert(0 <= i && i < 3, "Index out of range")
+        switch i {
+        case 0:
+            return x
+        case 1:
+            return y
+        case 2:
+            return z
+        default:
+            fatalError("Index out of range")
+        }
+    }
 }
 
 // Dot product
@@ -47,14 +61,14 @@ public func ==(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
     return SCNVector3EqualToVector3(lhs, rhs)
 }
 
-public func ≈(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
+public func ~=(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
     return abs(lhs.x - rhs.x) < EPSILON &&
         abs(lhs.y - rhs.y) < EPSILON &&
         abs(lhs.z - rhs.z) < EPSILON
 }
 
-public func !≈(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
-    return !(lhs ≈ rhs)
+public func !~=(lhs: SCNVector3, rhs: SCNVector3) -> Bool {
+    return !(lhs ~= rhs)
 }
 
 // Scalar multiplication
