@@ -22,8 +22,7 @@ Tests are complete for all implemented features.
 - equality (`==`)
 - inequality (`!=`)
 - equivalence (`~=`)
-  - Returns true if the components of two vectos are close to equal to each 
-    other.
+  - Returns true if the components are close to equal to each other.
 - inequivalence (`!~=`)
 - vector addition (`+`)
 - vector subtraction (`-`)
@@ -55,3 +54,4 @@ Tests are complete for all implemented features.
   - Vectors for colors, locations, directions, rotations
 - Rotation utilities
 - Torque and Force utilities
+- Utilize [Accelerate](https://developer.apple.com/library/mac/documentation/Accelerate/Reference/AccelerateFWRef/) or [Surge](https://github.com/mattt/Surge)

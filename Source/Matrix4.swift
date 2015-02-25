@@ -273,6 +273,40 @@ public func SCNMatrix4MakeColumns(x: SCNVector4, y: SCNVector4, z: SCNVector4, w
         m41: w.x, m42: w.y, m43: w.z, m44: w.w)
 }
 
+// Equality and equivalence
+
+public func ==(lhs: SCNMatrix4, rhs: SCNMatrix4) -> Bool {
+    return SCNMatrix4EqualToMatrix4(lhs, rhs)
+}
+
+public func ~=(lhs: SCNMatrix4, rhs: SCNMatrix4) -> Bool {
+    let m11 = abs(lhs.m11 - rhs.m11) < EPSILON
+    let m12 = abs(lhs.m12 - rhs.m12) < EPSILON
+    let m13 = abs(lhs.m13 - rhs.m13) < EPSILON
+    let m14 = abs(lhs.m14 - rhs.m14) < EPSILON
+    let m21 = abs(lhs.m21 - rhs.m21) < EPSILON
+    let m22 = abs(lhs.m22 - rhs.m22) < EPSILON
+    let m23 = abs(lhs.m23 - rhs.m23) < EPSILON
+    let m24 = abs(lhs.m24 - rhs.m24) < EPSILON
+    let m31 = abs(lhs.m31 - rhs.m31) < EPSILON
+    let m32 = abs(lhs.m32 - rhs.m32) < EPSILON
+    let m33 = abs(lhs.m33 - rhs.m33) < EPSILON
+    let m34 = abs(lhs.m34 - rhs.m34) < EPSILON
+    let m41 = abs(lhs.m41 - rhs.m41) < EPSILON
+    let m42 = abs(lhs.m42 - rhs.m42) < EPSILON
+    let m43 = abs(lhs.m43 - rhs.m43) < EPSILON
+    let m44 = abs(lhs.m44 - rhs.m44) < EPSILON
+
+    return m11 && m12 && m13 && m14 &&
+        m21 && m22 && m23 && m24 &&
+        m31 && m32 && m33 && m34 &&
+        m41 && m42 && m43 && m44
+}
+
+public func !~=(lhs: SCNMatrix4, rhs: SCNMatrix4) -> Bool {
+    return !(lhs ~= rhs)
+}
+
 // Matrix vector multiplication
 
 public func *(left: SCNMatrix4, right: SCNVector4) -> SCNVector4 {
@@ -301,11 +335,6 @@ public func *(left: Float, right: SCNMatrix4) -> SCNMatrix4 {
     return right * left
 }
 
-public func ==(lhs: SCNMatrix4, rhs: SCNMatrix4) -> Bool {
-    return SCNMatrix4EqualToMatrix4(lhs, rhs)
-}
-
-// Referenced from the following
 // https://bitbucket.org/eigen/eigen/src/968c30931d04a35c8b02d1bb386e690b45dc275c/Eigen/src/LU/Determinant.h?at=default#cl-75
 private func detHelper(matrix: SCNMatrix4, j: Int, k: Int, m: Int, n: Int) -> Float {
     return (matrix[j, 0] * matrix[k, 1] - matrix[k, 0] * matrix[j, 1])
@@ -318,9 +347,4 @@ public func det(m: SCNMatrix4) -> Float {
         + detHelper(m, 1, 2, 0, 3)
         - detHelper(m, 1, 3, 0, 2)
         + detHelper(m, 2, 3, 0, 1)
-}
-
-public func inverse(m: SCNMatrix4) -> SCNMatrix4? {
-    // TODO
-    fatalError("Not implemented")
 }

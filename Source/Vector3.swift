@@ -9,8 +9,6 @@
 import Foundation
 import SceneKit
 
-private let EPSILON: Float = 0.00001
-
 extension SCNVector3: Equatable, Vector {
     public func to4(w: Float) -> SCNVector4 {
         return SCNVector4(x: x, y: y, z: z, w: w)

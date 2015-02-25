@@ -70,7 +70,6 @@ class Vector4Tests: XCTestCase {
     }
 
     func testDotProduct() {
-        // This is an example of a functional test case.
         let a = SCNVector4(x: 0, y: 3, z: -7, w: 0)
         let b = SCNVector4(x: 2, y: 3, z: 1, w: 0)
         let result: Float = 2

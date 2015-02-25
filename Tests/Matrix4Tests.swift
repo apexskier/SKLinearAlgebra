@@ -8,6 +8,9 @@
 
 import XCTest
 import SceneKit
+//import Accelerate
+
+// https://github.com/haginile/SwiftAccelerate
 
 class Matrix4Tests: XCTestCase {
 
@@ -77,6 +80,50 @@ class Matrix4Tests: XCTestCase {
         XCTAssertEqual(m.m42, Float(1), "m42")
         XCTAssertEqual(m.m43, Float(1), "m43")
         XCTAssertEqual(m.m44, Float(2), "m44")
+    }
+
+    func testEquatable() {
+        let a = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 4, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+        let b = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 4, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+        let c = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 3, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+
+        XCTAssertTrue(a == b, "Matrix4 is equitable (==)")
+        XCTAssertTrue(a == b, "Matrix4 is equitable (==)")
+        XCTAssertTrue(b != c, "Matrix4 is equitable (!=)")
+    }
+
+    func testEquivalence() {
+        let a = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 4, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+        let b = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 4, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+        let c = SCNMatrix4(
+            m11: 1, m12: 2, m13: 3, m14: 4,
+            m21: 5, m22: 6, m23: 7, m24: 8,
+            m31: 2, m32: 6, m33: 3, m34: 8,
+            m41: 3, m42: 1, m43: 1, m44: 2)
+
+        XCTAssertTrue(a ~= a, "Matrix4 is equitable (~=)")
+        XCTAssertTrue(a ~= b, "Matrix4 is equitable (~=)")
+        XCTAssertTrue(b !~= c, "Matrix4 is equitable (!~=)")
     }
 
     func testSubscript() {

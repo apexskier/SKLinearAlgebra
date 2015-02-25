@@ -53,6 +53,6 @@ public class Basis {
         let y4: SCNVector4 = self.yAxis.to4(0)
         let z4: SCNVector4 = self.zAxis.to4(0)
         let w4: SCNVector4 = self.origin.to4(1)
-        return inverse(SCNMatrix4MakeColumns(x4, y4, z4, w4))?
+        return nil
     }()
 }

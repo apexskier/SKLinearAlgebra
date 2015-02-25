@@ -9,8 +9,7 @@
 import XCTest
 import SceneKit
 
-private let EPSILON: Float = 0.001
-private let EPSILON_SMALL: Float = 0.000001
+private let EPSILON_LESS: Float = 0.001
 
 class SKLinearAlgebraTests: XCTestCase {
 
@@ -46,14 +45,14 @@ class SKLinearAlgebraTests: XCTestCase {
         let b = SCNVector3(x: 2, y: 4, z: 6)
         let c = SCNVector3(x: -1, y: -2, z: -3)
 
-        XCTAssertEqualWithAccuracy(degrees(a, a), Float(0), EPSILON, "Same vector is parallel")
-        XCTAssertEqualWithAccuracy(degrees(a, b), Float(0), EPSILON, "Parallel vectors are parallel")
-        XCTAssertEqualWithAccuracy(degrees(a, c), Float(M_PI), EPSILON, "Opposite vectors are opposite")
+        XCTAssertEqualWithAccuracy(degrees(a, a), Float(0), EPSILON_LESS, "Same vector is parallel")
+        XCTAssertEqualWithAccuracy(degrees(a, b), Float(0), EPSILON_LESS, "Parallel vectors are parallel")
+        XCTAssertEqualWithAccuracy(degrees(a, c), Float(M_PI), EPSILON_LESS, "Opposite vectors are opposite")
 
         let p = SCNVector3(x: 4, y: 0, z: 7)
         let q = SCNVector3(x: -2, y: 1, z: 3)
 
-        XCTAssertEqualWithAccuracy(degrees(p, q), Float(1.1252), EPSILON, "Random vectors have correct degrees.")
+        XCTAssertEqualWithAccuracy(degrees(p, q), Float(1.1252), EPSILON_LESS, "Random vectors have correct degrees.")
     }
 
     func testVectorComponent() {
@@ -67,11 +66,11 @@ class SKLinearAlgebraTests: XCTestCase {
         let a = SCNVector3(x: 1, y: 2, z: 3)
         let b = SCNVector3(x: 1, y: 2, z: 3)
 
-        XCTAssertEqualWithAccuracy(component(a, b), magnitude(a), EPSILON_SMALL, "equal vectors component returns magnitude")
+        XCTAssertEqualWithAccuracy(component(a, b), magnitude(a), EPSILON, "equal vectors component returns magnitude")
 
         let c = SCNVector3(x: -1, y: -2, z: -3)
 
-        XCTAssertEqualWithAccuracy(component(a, b), magnitude(a), EPSILON_SMALL, "opposite vectors component returns magnitude")
+        XCTAssertEqualWithAccuracy(component(a, b), magnitude(a), EPSILON, "opposite vectors component returns magnitude")
 
         let d = SCNVector3(x: 0, y: 0, z: 2)
         let e = SCNVector3(x: 1, y: 0, z: 0)

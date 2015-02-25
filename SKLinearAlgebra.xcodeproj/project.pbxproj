@@ -76,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				C581946C1A9D24C600A11626 /* README.md */,
-				C551E7FE1A9C3BE500BFDD3C /* SLLinearAlgebra */,
-				C551E80B1A9C3BE500BFDD3C /* SKLinearAlgebraTests */,
+				C551E7FE1A9C3BE500BFDD3C /* Source */,
+				C551E80B1A9C3BE500BFDD3C /* Tests */,
 				C551E7FD1A9C3BE500BFDD3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C551E7FE1A9C3BE500BFDD3C /* SLLinearAlgebra */ = {
+		C551E7FE1A9C3BE500BFDD3C /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */,
@@ -102,8 +102,7 @@
 				C58194621A9D029000A11626 /* Vector3.swift */,
 				C551E7FF1A9C3BE500BFDD3C /* Supporting Files */,
 			);
-			name = SLLinearAlgebra;
-			path = SKLinearAlgebra;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		C551E7FF1A9C3BE500BFDD3C /* Supporting Files */ = {
@@ -114,7 +113,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C551E80B1A9C3BE500BFDD3C /* SKLinearAlgebraTests */ = {
+		C551E80B1A9C3BE500BFDD3C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */,
@@ -123,7 +122,7 @@
 				C581946A1A9D09D000A11626 /* Vector3Tests.swift */,
 				C551E80C1A9C3BE500BFDD3C /* Supporting Files */,
 			);
-			path = SKLinearAlgebraTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		C551E80C1A9C3BE500BFDD3C /* Supporting Files */ = {

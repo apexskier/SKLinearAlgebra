@@ -9,6 +9,8 @@
 import Foundation
 import SceneKit
 
+let EPSILON: Float = 0.00001
+
 public protocol Copyable {
     func copy() -> Self
 }
