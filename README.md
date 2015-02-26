@@ -9,7 +9,7 @@ It has been written in the style of Swift, intending to enhance and complete
 Scenekit's existing
 [functions](https://developer.apple.com/library/mac/documentation/SceneKit/Reference/SceneKit_Functions/).
 
-## Implemented
+## Features
 
 Tests are complete for all implemented features.
 
