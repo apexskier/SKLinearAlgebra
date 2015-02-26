@@ -21,11 +21,11 @@ Tests are complete for all implemented features.
 - equivalence (`~=`)
   - Returns true if the components are close to equal to each other.
 - inequivalence (`!~=`)
-- vector addition (`+`)
-- vector subtraction (`-`)
+- addition (`+`)
+- subtraction (`-`)
 - dot product (`*`)
 - scalar multiplication (`*`)
-- scalar division (`\`)
+- scalar division (`/`)
 - cross product (`×`)
 - subscript access (`v[0]`, `m[1, 2]`)
   - Zero based indexing
@@ -34,12 +34,12 @@ Tests are complete for all implemented features.
 ### Functions
 
 - cross product (`cross(a: Vector, b: Vector)`)
-- magnitude (`magnitude(v)`)
-- normalize (`normalize(v)`)
-- degrees between (`degrees(a, b)`)
-- component (`component(a, b)`) - comp_{b} a
+- magnitude (`magnitude(v: Vector)`)
+- normalize (`normalize(v: Vector)`)
+- degrees between (`degrees(a: Vector, b: Vector)`)
+- component (`component(a: Vector, b: Vector)`) - comp_{b} a
   - Read this as "the component of a onto b", it would be written comp_{b} a.
-- projection (`projection(a, b)`)
+- projection (`projection(a: Vector, b: Vector)`)
   - Read this as "the projection of a onto b", it would be written proj_{b} a
 - determinate (`det(m: Matrix)`)
 - transpose (`transpose(m: Matrix)`)
