@@ -10,7 +10,7 @@ import Foundation
 import SceneKit
 
 extension SCNVector4: Equatable, Vector {
-    public init(array: [Float]) {
+    public init(_ array: [Float]) {
         assert(array.count == 4)
 
         x = array[0]

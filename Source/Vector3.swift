@@ -10,6 +10,14 @@ import Foundation
 import SceneKit
 
 extension SCNVector3: Equatable, Vector {
+    public init(_ array: [Float]) {
+        assert(array.count == 3)
+
+        x = array[0]
+        y = array[1]
+        z = array[2]
+    }
+
     public func to4(w: Float) -> SCNVector4 {
         return SCNVector4(x: x, y: y, z: z, w: w)
     }

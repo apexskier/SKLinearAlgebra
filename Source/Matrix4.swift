@@ -11,16 +11,16 @@ import Foundation
 import SceneKit
 
 extension SCNMatrix4: Matrix {
-    public init(contents: [[Float]]) {
+    public init(_ contents: [[Float]]) {
         assert(contents.count == 4 && contents[0].count == 4)
 
-        self.init(x: SCNVector4(array: contents[0]),
-            y: SCNVector4(array: contents[1]),
-            z: SCNVector4(array: contents[2]),
-            w: SCNVector4(array: contents[3]))
+        self.init(x: SCNVector4(contents[0]),
+            y: SCNVector4(contents[1]),
+            z: SCNVector4(contents[2]),
+            w: SCNVector4(contents[3]))
     }
 
-    public init(contents a: [Float]) {
+    public init(_ a: [Float]) {
         assert(a.count == 16)
 
         m11 = a[0]
@@ -361,5 +361,5 @@ public func inverse(m: SCNMatrix4) -> SCNMatrix4 {
 
     assert(error == 0, "MatrixFloat not invertible")
 
-    return SCNMatrix4(contents: grid)
+    return SCNMatrix4(grid)
 }

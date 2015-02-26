@@ -62,16 +62,16 @@ class Matrix4Tests: XCTestCase {
             w: SCNVector4(x: 3, y: 1, z: 1, w: 2))
 
         let m3 = SCNMatrix4(
-            contents: [1, 2, 3, 4,
-                5, 6, 7, 8,
-                2, 6, 4, 8,
-                3, 1, 1, 2])
+            [1, 2, 3, 4,
+            5, 6, 7, 8,
+            2, 6, 4, 8,
+            3, 1, 1, 2])
 
         let m4 = SCNMatrix4(
-            contents: [[1, 2, 3, 4],
-                [5, 6, 7, 8],
-                [2, 6, 4, 8],
-                [3, 1, 1, 2]])
+            [[1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [2, 6, 4, 8],
+            [3, 1, 1, 2]])
 
 
         XCTAssertTrue(m == m2, "matrix is equal")
@@ -228,7 +228,7 @@ class Matrix4Tests: XCTestCase {
             [-0.833333, 0.277778, 0.222222, -0.333333],
             [0.166667, 0.277778, -0.277778, -0.333333],
             [0.583333, -0.361111, 0.111111, 0.333333]]
-        let im = SCNMatrix4(contents: rawInverse)
+        let im = SCNMatrix4(rawInverse)
 
         XCTAssertTrue(inverse(m) ~= im, "inverse matrix")
     }
