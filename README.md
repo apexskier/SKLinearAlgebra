@@ -46,6 +46,27 @@ Tests are complete for all implemented features.
 - transpose (`transpose(m: Matrix)`)
 - inverse (`inverse(m: Matrix)`)
 
+## Usage
+
+The documentation for using a custom Swift library is lacking at the moment, but
+my process has been as follows:
+
+1. Clone `git@github.com:apexskier/SKLinearAlgebra.git` into your project directory.
+2. Drag `SKLinearAlgebra.xcodeproj` into your Xcode project.
+4. Select your project, select your target, under General find "Linked Frameworks and Libraries".
+3. Add `SKLinearAlgebra.framework`, either from the + button or by dragging in `SKLinearAlgebra/Products/SKLinearAlgebra.framework` from the project navigator.
+
+```Swift
+// Example import statements
+
+import SceneKit
+import SKLinearAlgebra
+
+let vector = SCNVector4(x: 1, y: 2, z: 3, w: 4)
+vector *= 4
+println(vector)
+```
+
 ## Future Plans
 
 - Some kind of support for bases (origin + 3 vectors)
