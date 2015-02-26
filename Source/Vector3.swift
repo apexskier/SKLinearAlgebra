@@ -9,7 +9,7 @@
 import Foundation
 import SceneKit
 
-extension SCNVector3: Equatable, Vector {
+extension SCNVector3: Vector {
     public init(_ array: [Float]) {
         assert(array.count == 3)
 
