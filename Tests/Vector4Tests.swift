@@ -124,7 +124,7 @@ class Vector4Tests: XCTestCase {
     }
 
     func testScalarMultiplication() {
-        let a = SCNVector4(x: 2, y: 3, z: 1, w: 0)
+        var a = SCNVector4(x: 2, y: 3, z: 1, w: 0)
         let cf: Float = 4.0
         let ci: Int = 4
 
@@ -134,10 +134,13 @@ class Vector4Tests: XCTestCase {
         XCTAssertEqual(cf * a, result, "Float scalar left multiplication")
         XCTAssertEqual(a * ci, result, "Int scalar right multiplication")
         XCTAssertEqual(ci * a, result, "Int scalar left multiplication")
+
+        a *= cf
+        XCTAssertEqual(a, result)
     }
 
     func testScalarDivision() {
-        let a = SCNVector4(x: 9, y: 12, z: -3, w: 0)
+        var a = SCNVector4(x: 9, y: 12, z: -3, w: 0)
         let cf: Float = 3
         let ci: Int = 3
 
@@ -145,10 +148,13 @@ class Vector4Tests: XCTestCase {
 
         XCTAssertEqual(a / cf, result, "Float scalar division correct")
         XCTAssertEqual(a / ci, result, "Int scalar division correct")
+
+        a /= cf
+        XCTAssertEqual(a, result)
     }
 
     func testVectorSubtraction() {
-        let a = SCNVector4(x: 12, y: 2, z: 4, w: 0)
+        var a = SCNVector4(x: 12, y: 2, z: 4, w: 0)
         let b = SCNVector4(x: 3, y: -4, z: 3, w: 0)
 
         let resultab = SCNVector4(x: 9, y: 6, z: 1, w: 0)
@@ -156,16 +162,22 @@ class Vector4Tests: XCTestCase {
 
         XCTAssertEqual(a - b, resultab, "subtraction test 1")
         XCTAssertEqual(b - a, resultba, "subtraction test 2")
+
+        a -= b
+        XCTAssertEqual(a, resultab)
     }
 
     func testVectorAddition() {
-        let a = SCNVector4(x: 12, y: 2, z: 4, w: 0)
+        var a = SCNVector4(x: 12, y: 2, z: 4, w: 0)
         let b = SCNVector4(x: 3, y: -4, z: 3, w: 0)
 
         let result = SCNVector4(x: 15, y: -2, z: 7, w: 0)
 
         XCTAssertEqual(a + b, result, "addition test 1")
         XCTAssertEqual(b + a, result, "addition test 2")
+
+        a += b
+        XCTAssertEqual(a, result)
     }
 
 }

@@ -20,11 +20,11 @@ Tests are complete for all implemented features.
 - equivalence (`~=`)
   - Returns true if the components are close to equal to each other.
 - inequivalence (`!~=`)
-- addition (`+`)
-- subtraction (`-`)
+- addition (`+`, `+=`)
+- subtraction (`-`, `-=`)
 - dot product (`*`)
-- scalar multiplication (`*`)
-- scalar division (`/`)
+- scalar multiplication (`*`, `*=`)
+- scalar division (`/`, `/=`)
 - cross product (`×`)
 - subscript access (`v[0]`, `m[1, 2]`)
   - Zero based indexing

@@ -134,6 +134,14 @@ public func *(left: Int, right: SCNVector4) -> SCNVector4 {
     return Float(left) * right
 }
 
+public func *=(inout left: SCNVector4, right: Float) {
+    left = left * right
+}
+
+public func *=(inout left: SCNVector4, right: Int) {
+    left = left * right
+}
+
 // Scalar Division
 
 public func /(left: SCNVector4, right: Float) -> SCNVector4 {
@@ -148,6 +156,14 @@ public func /(left: SCNVector4, right: Int) -> SCNVector4 {
     return left / Float(right)
 }
 
+public func /=(inout left: SCNVector4, right: Float) {
+    left = left / right
+}
+
+public func /=(inout left: SCNVector4, right: Int) {
+    left = left / right
+}
+
 // Vector subtraction
 
 public func -(left: SCNVector4, right: SCNVector4) -> SCNVector4 {
@@ -160,6 +176,10 @@ public func -(left: SCNVector4, right: SCNVector4) -> SCNVector4 {
     return SCNVector4(x: x, y: y, z: z, w: w)
 }
 
+public func -=(inout left: SCNVector4, right: SCNVector4) {
+    left = left - right
+}
+
 // Vector addition
 
 public func +(left: SCNVector4, right: SCNVector4) -> SCNVector4 {
@@ -170,4 +190,8 @@ public func +(left: SCNVector4, right: SCNVector4) -> SCNVector4 {
     let w = left.w * right.w
 
     return SCNVector4(x: x, y: y, z: z, w: w)
+}
+
+public func +=(inout left: SCNVector4, right: SCNVector4) {
+    left = left + right
 }

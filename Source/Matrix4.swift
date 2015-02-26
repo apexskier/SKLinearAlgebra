@@ -283,6 +283,44 @@ public func *(left: Float, right: SCNMatrix4) -> SCNMatrix4 {
     return right * left
 }
 
+public func *(left: SCNMatrix4, right: Int) -> SCNMatrix4 {
+    return left * Float(right)
+}
+
+public func *(left: Int, right: SCNMatrix4) -> SCNMatrix4 {
+    return right * Float(left)
+}
+
+public func *=(inout left: SCNMatrix4, right: Float) {
+    left = left * right
+}
+
+public func *=(inout left: SCNMatrix4, right: Int) {
+    left = left * right
+}
+
+// Scalar division
+
+public func /(left: SCNMatrix4, right: Float) -> SCNMatrix4 {
+    return SCNMatrix4(
+        m11: left.m11 / right, m12: left.m12 / right, m13: left.m13 / right, m14: left.m14 / right,
+        m21: left.m21 / right, m22: left.m22 / right, m23: left.m23 / right, m24: left.m24 / right,
+        m31: left.m31 / right, m32: left.m32 / right, m33: left.m33 / right, m34: left.m34 / right,
+        m41: left.m41 / right, m42: left.m42 / right, m43: left.m43 / right, m44: left.m44 / right)
+}
+
+public func /(left: SCNMatrix4, right: Int) -> SCNMatrix4 {
+    return left / Float(right)
+}
+
+public func /=(inout left: SCNMatrix4, right: Float) {
+    left = left / right
+}
+
+public func /=(inout left: SCNMatrix4, right: Int) {
+    left = left / right
+}
+
 // https://bitbucket.org/eigen/eigen/src/968c30931d04a35c8b02d1bb386e690b45dc275c/Eigen/src/LU/Determinant.h?at=default#cl-75
 private func detHelper(matrix: SCNMatrix4, j: Int, k: Int, m: Int, n: Int) -> Float {
     return (matrix[j, 0] * matrix[k, 1] - matrix[k, 0] * matrix[j, 1])
