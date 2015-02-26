@@ -6,10 +6,67 @@
 //  Copyright (c) 2015 Cameron Little. All rights reserved.
 //
 
+import Accelerate
 import Foundation
 import SceneKit
+import Surge
 
 extension SCNMatrix4: Matrix {
+    public init(contents: [[Float]]) {
+        assert(contents.count == 4 && contents[0].count == 4)
+
+        self.init(x: SCNVector4(array: contents[0]),
+            y: SCNVector4(array: contents[1]),
+            z: SCNVector4(array: contents[2]),
+            w: SCNVector4(array: contents[3]))
+    }
+
+    public init(contents a: [Float]) {
+        assert(a.count == 16)
+
+        m11 = a[0]
+        m12 = a[1]
+        m13 = a[2]
+        m14 = a[3]
+
+        m21 = a[4]
+        m22 = a[5]
+        m23 = a[6]
+        m24 = a[7]
+
+        m31 = a[8]
+        m32 = a[9]
+        m33 = a[10]
+        m34 = a[11]
+
+        m41 = a[12]
+        m42 = a[13]
+        m43 = a[14]
+        m44 = a[15]
+    }
+
+    public init(x: SCNVector4, y: SCNVector4, z: SCNVector4, w: SCNVector4) {
+        m11 = x.x
+        m12 = x.y
+        m13 = x.z
+        m14 = x.w
+
+        m21 = y.x
+        m22 = y.y
+        m23 = y.z
+        m24 = y.w
+
+        m31 = z.x
+        m32 = z.y
+        m33 = z.z
+        m34 = z.w
+
+        m41 = w.x
+        m42 = w.y
+        m43 = w.z
+        m44 = w.w
+    }
+
     public func copy() -> SCNMatrix4 {
         return SCNMatrix4(m11: m11, m12: m12, m13: m13, m14: m14, m21: m21, m22: m22, m23: m23, m24: m24, m31: m31, m32: m32, m33: m33, m34: m34, m41: m41, m42: m42, m43: m43, m44: m44)
     }
@@ -141,6 +198,20 @@ extension SCNMatrix4: Matrix {
             " [\(m31), \(m32), \(m33), \(m34)]\n" +
             " [\(m41), \(m42), \(m43), \(m44)]]"
     }
+
+    public var floatArray: [[Float]] {
+        return [[m11, m12, m13, m14],
+            [m21, m22, m23, m24],
+            [m31, m32, m33, m34],
+            [m41, m42, m43, m44]]
+    }
+
+    private var linearFloatArray: [Float] {
+        return [m11, m12, m13, m14,
+            m21, m22, m23, m24,
+            m31, m32, m33, m34,
+            m41, m42, m43, m44]
+    }
 }
 
 public func SCNMatrix4MakeColumns(x: SCNVector4, y: SCNVector4, z: SCNVector4, w: SCNVector4) -> SCNMatrix4 {
@@ -225,4 +296,36 @@ public func det(m: SCNMatrix4) -> Float {
         + detHelper(m, 1, 2, 0, 3)
         - detHelper(m, 1, 3, 0, 2)
         + detHelper(m, 2, 3, 0, 1)
+}
+
+public func transpose(m: SCNMatrix4) -> SCNMatrix4 {
+    return SCNMatrix4(
+        m11: m.m11, m12: m.m21, m13: m.m31, m14: m.m41,
+        m21: m.m12, m22: m.m22, m23: m.m32, m24: m.m42,
+        m31: m.m13, m32: m.m23, m33: m.m33, m34: m.m43,
+        m41: m.m14, m42: m.m24, m43: m.m34, m44: m.m44)
+}
+
+public func inverse(m: SCNMatrix4) -> SCNMatrix4 {
+    //let sm: Surge.Matrix = Surge.MatrixFloat(m.floatArray)
+    //let invsm = Surge.inv(sm)
+
+    // NOTE: Surge doesn't seem to be working the way I'd like when initializing matrixes.
+
+    var results = [Float](count: 16, repeatedValue: 0.0)
+
+    var grid = m.linearFloatArray
+
+    var ipiv = [__CLPK_integer](count: 16, repeatedValue: 0)
+    var lwork = __CLPK_integer(16)
+    var work = [CFloat](count: Int(lwork), repeatedValue: 0.0)
+    var error: __CLPK_integer = 0
+    var nc = __CLPK_integer(4)
+
+    sgetrf_(&nc, &nc, &(grid), &nc, &ipiv, &error)
+    sgetri_(&nc, &(grid), &nc, &ipiv, &work, &lwork, &error)
+
+    assert(error == 0, "MatrixFloat not invertible")
+
+    return SCNMatrix4(contents: grid)
 }

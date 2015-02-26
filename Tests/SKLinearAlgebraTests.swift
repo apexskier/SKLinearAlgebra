@@ -81,6 +81,7 @@ class SKLinearAlgebraTests: XCTestCase {
     func testVectorProjection() {
         let p = SCNVector3(x: 0, y: 3, z: 0)
         let q = SCNVector3(x: 1, y: 0, z: 0)
+        
         XCTAssertEqual(projection(q, p), SCNVector3Zero, "orthogonal projection is zero vector")
 
         let x = SCNVector3(x: 0, y: 3, z: 0)
@@ -92,10 +93,7 @@ class SKLinearAlgebraTests: XCTestCase {
         let b = SCNVector3(x: 3, y: 3, z: 4)
         let result = SCNVector3(x: 21.0/17.0, y: 21.0/17.0, z: 28.0/17.0)
 
-        println(projection(a, b).description)
-        println(result.description)
         XCTAssertTrue(projection(a, b) ~= result, "projection test")
-
 
         let d = SCNVector4(x: 0, y: 1, z: -1, w: 0)
         let c = SCNVector4(x: 0, y: 1, z: 0, w: 1)

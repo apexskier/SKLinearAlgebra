@@ -1,6 +1,5 @@
 # SKLinearAlgebra
 
-Linear Algebra extensions for SceneKit
 
 This library allows common vector operations using SceneKit's
 [native types](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_DataTypes/): 
@@ -10,8 +9,6 @@ linear algebra functions for 3D graphics.
 It has been written in the style of Swift, intending to enhance and complete 
 Scenekit's existing
 [functions](https://developer.apple.com/library/mac/documentation/SceneKit/Reference/SceneKit_Functions/).
-
-You should follow [me on Twitter](https://twitter.com/apexskier).
 
 ## Implemented
 
@@ -44,7 +41,10 @@ Tests are complete for all implemented features.
   - Read this as "the component of a onto b", it would be written comp_{b} a.
 - projection (`projection(a, b)`)
   - Read this as "the projection of a onto b", it would be written proj_{b} a
+
 - determinate (`det(m: Matrix)`)
+- transpose (`transpose(m: Matrix)`)
+- inverse (`inverse(m: Matrix)`)
 
 ## Future Ideas
 
@@ -55,3 +55,8 @@ Tests are complete for all implemented features.
 - Rotation utilities
 - Torque and Force utilities
 - Utilize [Accelerate](https://developer.apple.com/library/mac/documentation/Accelerate/Reference/AccelerateFWRef/) or [Surge](https://github.com/mattt/Surge)
+
+
+
+
+You should follow [me on Twitter](https://twitter.com/apexskier).

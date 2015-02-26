@@ -11,6 +11,15 @@ import SceneKit
 import Surge
 
 extension SCNVector4: Equatable, Vector {
+    public init(array: [Float]) {
+        assert(array.count == 4)
+
+        x = array[0]
+        y = array[1]
+        z = array[2]
+        w = array[3]
+    }
+
     public func to3() -> SCNVector3 {
         return SCNVector3(x: x, y: y, z: z)
     }
@@ -87,7 +96,7 @@ public func *(left: SCNVector4, right: SCNVector4) -> Float {
     return (left.x * right.x) + (left.y * right.y) + (left.z * right.z)
 }
 
-public func dot(left: SCNVector4, right: SCNVector4) -> Double {
+func dot(left: SCNVector4, right: SCNVector4) -> Float {
     return Surge.dot(left.floatArray, right.floatArray)
 }
 

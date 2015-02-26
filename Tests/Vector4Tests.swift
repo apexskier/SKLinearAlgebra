@@ -8,6 +8,7 @@
 
 import XCTest
 import SceneKit
+import Surge
 
 class Vector4Tests: XCTestCase {
 
@@ -76,6 +77,89 @@ class Vector4Tests: XCTestCase {
 
         XCTAssertEqual(a * b, result, "Dot product of Vector4 correct")
         XCTAssertEqual(dot(a, b), result, "Dot product of Vector4 correct")
+    }
+
+    func testDotPerformanceExample() {
+        let a = SCNVector4(x: 0, y: 3, z: -7, w: 0)
+        let b = SCNVector4(x: 2, y: 3, z: 1, w: 0)
+        let result: Float = 2
+
+        let values = map(0...1000){ _ in
+            (
+                SCNVector4(
+                    x: Float(arc4random()),
+                    y: Float(arc4random()),
+                    z: Float(arc4random()),
+                    w: Float(arc4random())),
+                SCNVector4(
+                    x: Float(arc4random()),
+                    y: Float(arc4random()),
+                    z: Float(arc4random()),
+                    w: Float(arc4random()))
+            )
+        }
+
+        self.measureBlock() {
+            for (a, b) in values {
+                let r = a * b
+            }
+        }
+    }
+    
+    func testDotSurgePerformanceExample() {
+        let a = SCNVector4(x: 0, y: 3, z: -7, w: 0)
+        let b = SCNVector4(x: 2, y: 3, z: 1, w: 0)
+        let result: Float = 2
+
+        let values = map(0...1000){ _ in
+            (
+                SCNVector4(
+                    x: Float(arc4random()),
+                    y: Float(arc4random()),
+                    z: Float(arc4random()),
+                    w: Float(arc4random())),
+                SCNVector4(
+                    x: Float(arc4random()),
+                    y: Float(arc4random()),
+                    z: Float(arc4random()),
+                    w: Float(arc4random()))
+            )
+        }
+
+        self.measureBlock() {
+            for (a, b) in values {
+                let r = dot(a, b)
+            }
+        }
+    }
+
+    func testDotSurgeArrayPerformanceExample() {
+        let a = SCNVector4(x: 0, y: 3, z: -7, w: 0)
+        let b = SCNVector4(x: 2, y: 3, z: 1, w: 0)
+        let result: Float = 2
+
+        let values = map(0...1000){ _ in
+            (
+                [
+                    Float(arc4random()),
+                    Float(arc4random()),
+                    Float(arc4random()),
+                    Float(arc4random())
+                ],
+                [
+                    Float(arc4random()),
+                    Float(arc4random()),
+                    Float(arc4random()),
+                    Float(arc4random())
+                ]
+            )
+        }
+
+        self.measureBlock() {
+            for (a, b) in values {
+                let r = Surge.dot(a, b)
+            }
+        }
     }
 
     func testCrossProduct() {
