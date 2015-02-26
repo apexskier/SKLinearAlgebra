@@ -1,3 +1,5 @@
 language: objective-c
 
-script: xctool -project SKLinearAlgebra.xcodeproj -scheme SKLinearAlgebra -sdk iphonesimulator test
+script: xctool -project SKLinearAlgebra.xcodeproj -scheme SKLinearAlgebra
+
+# TODO: test

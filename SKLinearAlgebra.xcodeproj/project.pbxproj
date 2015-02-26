@@ -24,6 +24,8 @@
 		C581946F1A9D38A800A11626 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946E1A9D38A800A11626 /* Matrix4.swift */; };
 		C58194711A9D3A7700A11626 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194701A9D3A7700A11626 /* TypeAliases.swift */; };
 		C58194721A9D3C5600A11626 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194701A9D3A7700A11626 /* TypeAliases.swift */; };
+		C5E533761A9FA5FD0057853F /* Accelerate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5E533781A9FA65C0057853F /* Accelerate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,31 @@
 			remoteInfo = SKLinearAlgebra;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5E533751A9FA5F40057853F /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C5E533761A9FA5FD0057853F /* Accelerate.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5E533771A9FA64F0057853F /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C5E533781A9FA65C0057853F /* Accelerate.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C54B5F301A9D40A400ED329F /* Basis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basis.swift; sourceTree = "<group>"; };
@@ -154,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C551E8121A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "SKLinearAlgebra" */;
 			buildPhases = (
+				C5E533751A9FA5F40057853F /* Copy Frameworks */,
 				C551E7F71A9C3BE500BFDD3C /* Sources */,
 				C551E7F81A9C3BE500BFDD3C /* Frameworks */,
 				C551E7F91A9C3BE500BFDD3C /* Headers */,
@@ -172,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C551E8151A9C3BE500BFDD3C /* Build configuration list for PBXNativeTarget "SKLinearAlgebraTests" */;
 			buildPhases = (
+				C5E533771A9FA64F0057853F /* Copy Frameworks */,
 				C551E8031A9C3BE500BFDD3C /* Sources */,
 				C551E8041A9C3BE500BFDD3C /* Frameworks */,
 				C551E8051A9C3BE500BFDD3C /* Resources */,
