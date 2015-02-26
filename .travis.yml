@@ -1,6 +1,3 @@
 language: objective-c
-before_script:
-    - brew update
-    - brew install xctool
 xcode_project: SKLinearAlgebra.xcodeproj
 xcode_scheme: SKLinearAlgebraTests
