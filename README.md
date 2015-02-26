@@ -41,12 +41,11 @@ Tests are complete for all implemented features.
   - Read this as "the component of a onto b", it would be written comp_{b} a.
 - projection (`projection(a, b)`)
   - Read this as "the projection of a onto b", it would be written proj_{b} a
-
 - determinate (`det(m: Matrix)`)
 - transpose (`transpose(m: Matrix)`)
 - inverse (`inverse(m: Matrix)`)
 
-## Future Ideas
+## Future Plans
 
 - Some kind of support for bases (origin + 3 vectors)
   - Conversion between basis
