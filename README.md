@@ -1,4 +1,6 @@
 # SKLinearAlgebra
+[![Build Status](http://img.shields.io/travis/apexskier/SKLinearAlgebra.svg)](https://travis-ci.org/apexskier/SKLinearAlgebra)
+
 
 This library allows common vector operations using SceneKit's
 [native types](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_DataTypes/): 
