@@ -8,7 +8,6 @@
 
 import Foundation
 import SceneKit
-import Surge
 
 extension SCNVector4: Equatable, Vector {
     public init(array: [Float]) {
@@ -94,10 +93,6 @@ public func !~=(lhs: SCNVector4, rhs: SCNVector4) -> Bool {
 
 public func *(left: SCNVector4, right: SCNVector4) -> Float {
     return (left.x * right.x) + (left.y * right.y) + (left.z * right.z)
-}
-
-func dot(left: SCNVector4, right: SCNVector4) -> Float {
-    return Surge.dot(left.floatArray, right.floatArray)
 }
 
 // Cross product

@@ -8,7 +8,6 @@
 
 import XCTest
 import SceneKit
-import Surge
 
 // https://github.com/haginile/SwiftAccelerate
 

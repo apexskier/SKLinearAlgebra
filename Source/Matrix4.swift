@@ -9,7 +9,6 @@
 import Accelerate
 import Foundation
 import SceneKit
-import Surge
 
 extension SCNMatrix4: Matrix {
     public init(contents: [[Float]]) {
@@ -307,10 +306,7 @@ public func transpose(m: SCNMatrix4) -> SCNMatrix4 {
 }
 
 public func inverse(m: SCNMatrix4) -> SCNMatrix4 {
-    //let sm: Surge.Matrix = Surge.MatrixFloat(m.floatArray)
-    //let invsm = Surge.inv(sm)
-
-    // NOTE: Surge doesn't seem to be working the way I'd like when initializing matrixes.
+    // https://github.com/mattt/Surge/
 
     var results = [Float](count: 16, repeatedValue: 0.0)
 

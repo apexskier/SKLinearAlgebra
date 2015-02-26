@@ -10,7 +10,7 @@
 		C54B5F311A9D40A400ED329F /* Basis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B5F301A9D40A400ED329F /* Basis.swift */; };
 		C54B5F331A9D563900ED329F /* Matrix4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B5F321A9D563900ED329F /* Matrix4Tests.swift */; };
 		C54B5F341A9D5C5100ED329F /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946E1A9D38A800A11626 /* Matrix4.swift */; };
-		C54C0B641A9E8C9B00AED5A0 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54C0B611A9E8C8800AED5A0 /* Surge.framework */; };
+		C54C0B771A9ED37F00AED5A0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */; };
 		C551E8081A9C3BE500BFDD3C /* SKLinearAlgebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */; };
 		C551E80F1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E80E1A9C3BE500BFDD3C /* SKLinearAlgebraTests.swift */; };
 		C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E8181A9C3C0900BFDD3C /* LinearAlgebra.swift */; };
@@ -27,20 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C54C0B601A9E8C8800AED5A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C54C0B5B1A9E8C8800AED5A0 /* Surge.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8A1E1AA19917A79009735E2;
-			remoteInfo = Surge;
-		};
-		C54C0B621A9E8C8800AED5A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C54C0B5B1A9E8C8800AED5A0 /* Surge.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F84A6AAE19A9A72F007B53E1;
-			remoteInfo = SurgeTests;
-		};
 		C551E8091A9C3BE500BFDD3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C551E7F31A9C3BE500BFDD3C /* Project object */;
@@ -53,7 +39,7 @@
 /* Begin PBXFileReference section */
 		C54B5F301A9D40A400ED329F /* Basis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basis.swift; sourceTree = "<group>"; };
 		C54B5F321A9D563900ED329F /* Matrix4Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4Tests.swift; sourceTree = "<group>"; };
-		C54C0B5B1A9E8C8800AED5A0 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = Surge/Surge.xcodeproj; sourceTree = "<group>"; };
+		C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		C551E7FC1A9C3BE500BFDD3C /* SKLinearAlgebra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKLinearAlgebra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C551E8001A9C3BE500BFDD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C551E8071A9C3BE500BFDD3C /* SKLinearAlgebraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKLinearAlgebraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54C0B641A9E8C9B00AED5A0 /* Surge.framework in Frameworks */,
+				C54C0B771A9ED37F00AED5A0 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,19 +75,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C54C0B5C1A9E8C8800AED5A0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C54C0B611A9E8C8800AED5A0 /* Surge.framework */,
-				C54C0B631A9E8C8800AED5A0 /* SurgeTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C551E7F21A9C3BE500BFDD3C = {
 			isa = PBXGroup;
 			children = (
-				C54C0B5B1A9E8C8800AED5A0 /* Surge.xcodeproj */,
+				C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */,
 				C581946C1A9D24C600A11626 /* README.md */,
 				C551E7FE1A9C3BE500BFDD3C /* Source */,
 				C551E80B1A9C3BE500BFDD3C /* Tests */,
@@ -237,12 +214,6 @@
 			mainGroup = C551E7F21A9C3BE500BFDD3C;
 			productRefGroup = C551E7FD1A9C3BE500BFDD3C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C54C0B5C1A9E8C8800AED5A0 /* Products */;
-					ProjectRef = C54C0B5B1A9E8C8800AED5A0 /* Surge.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C551E7FB1A9C3BE500BFDD3C /* SKLinearAlgebra */,
@@ -250,23 +221,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C54C0B611A9E8C8800AED5A0 /* Surge.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Surge.framework;
-			remoteRef = C54C0B601A9E8C8800AED5A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C54C0B631A9E8C8800AED5A0 /* SurgeTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SurgeTests.xctest;
-			remoteRef = C54C0B621A9E8C8800AED5A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C551E7FA1A9C3BE500BFDD3C /* Resources */ = {
