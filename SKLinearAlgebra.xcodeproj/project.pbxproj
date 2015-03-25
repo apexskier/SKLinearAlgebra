@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C516E2CD1AC08CBE001EE581 /* Rotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516E2CC1AC08CBE001EE581 /* Rotations.swift */; };
 		C54B5F311A9D40A400ED329F /* Basis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B5F301A9D40A400ED329F /* Basis.swift */; };
 		C54B5F331A9D563900ED329F /* Matrix4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B5F321A9D563900ED329F /* Matrix4Tests.swift */; };
 		C54B5F341A9D5C5100ED329F /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946E1A9D38A800A11626 /* Matrix4.swift */; };
@@ -24,6 +25,7 @@
 		C581946F1A9D38A800A11626 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581946E1A9D38A800A11626 /* Matrix4.swift */; };
 		C58194711A9D3A7700A11626 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194701A9D3A7700A11626 /* TypeAliases.swift */; };
 		C58194721A9D3C5600A11626 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58194701A9D3A7700A11626 /* TypeAliases.swift */; };
+		C59F4F6E1AC09DDD00607A9E /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59F4F6D1AC09DDD00607A9E /* Nodes.swift */; };
 		C5E533761A9FA5FD0057853F /* Accelerate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C5E533781A9FA65C0057853F /* Accelerate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -64,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C516E2CC1AC08CBE001EE581 /* Rotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotations.swift; sourceTree = "<group>"; };
 		C54B5F301A9D40A400ED329F /* Basis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basis.swift; sourceTree = "<group>"; };
 		C54B5F321A9D563900ED329F /* Matrix4Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4Tests.swift; sourceTree = "<group>"; };
 		C54C0B761A9ED37F00AED5A0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -80,6 +83,7 @@
 		C581946C1A9D24C600A11626 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C581946E1A9D38A800A11626 /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
 		C58194701A9D3A7700A11626 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		C59F4F6D1AC09DDD00607A9E /* Nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +133,10 @@
 				C54B5F301A9D40A400ED329F /* Basis.swift */,
 				C58194701A9D3A7700A11626 /* TypeAliases.swift */,
 				C58194641A9D040B00A11626 /* Vector4.swift */,
+				C59F4F6D1AC09DDD00607A9E /* Nodes.swift */,
 				C58194621A9D029000A11626 /* Vector3.swift */,
 				C581946E1A9D38A800A11626 /* Matrix4.swift */,
+				C516E2CC1AC08CBE001EE581 /* Rotations.swift */,
 				C551E7FF1A9C3BE500BFDD3C /* Supporting Files */,
 			);
 			path = Source;
@@ -276,9 +282,11 @@
 				C581946F1A9D38A800A11626 /* Matrix4.swift in Sources */,
 				C58194631A9D029000A11626 /* Vector3.swift in Sources */,
 				C58194651A9D040B00A11626 /* Vector4.swift in Sources */,
+				C516E2CD1AC08CBE001EE581 /* Rotations.swift in Sources */,
 				C58194711A9D3A7700A11626 /* TypeAliases.swift in Sources */,
 				C54B5F311A9D40A400ED329F /* Basis.swift in Sources */,
 				C551E8191A9C3C0900BFDD3C /* LinearAlgebra.swift in Sources */,
+				C59F4F6E1AC09DDD00607A9E /* Nodes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

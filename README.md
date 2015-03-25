@@ -37,7 +37,7 @@ Tests are complete for all implemented features.
 - cross product (`cross(a: Vector, b: Vector)`)
 - magnitude (`magnitude(v: Vector)`)
 - normalize (`normalize(v: Vector)`)
-- degrees between (`degrees(a: Vector, b: Vector)`)
+- angle between (`angle(a: Vector, b: Vector)`)
 - component (`component(a: Vector, b: Vector)`) - comp_{b} a
   - Read this as "the component of a onto b", it would be written comp_{b} a.
 - projection (`projection(a: Vector, b: Vector)`)
